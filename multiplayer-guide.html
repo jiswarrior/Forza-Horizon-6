@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Multiplayer Guide — All Horizon Play Modes [2026] | FH6Guide</title>
+<meta name="description" content="Complete FH6 multiplayer guide. All 6 Horizon Play modes explained: Spec Racing, Touge Showdown, The Eliminator, Hide & Seek, Horizon Racing, Horizon Drift — how each works and tips.">
+<link rel="canonical" href="https://www.fh6guide.org/multiplayer-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0c;--bg2:#111116;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#e8ff47;--accent2:#ff6b35;--accent3:#47c5ff;--text:#f0efe8;--muted:#7a7a88;--muted2:#4a4a58;--green:#1D9E75;--amber:#BA7517;--red:#ff4d4d;--purple:#7F77DD;--font-disp:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);transition:color .15s;white-space:nowrap}.nav-links a:hover{color:var(--text)}.nav-links a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;flex-shrink:0}.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:160px}.nav-search input::placeholder{color:var(--muted2)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0;background:none;border:none}.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}.nav-drawer.open{display:flex}.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}.nav-drawer a:hover,.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}.nav-drawer-search input::placeholder{color:var(--muted2)}
+.page-wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+.breadcrumb{padding:14px 0;font-size:12px;color:var(--muted);font-family:var(--font-mono);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}.breadcrumb a{color:var(--muted);transition:color .15s}.breadcrumb a:hover{color:var(--text)}
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+.article-header{padding:0 0 28px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.article-tags{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid}
+.tag-multi{color:var(--green);border-color:rgba(29,158,117,.3);background:rgba(29,158,117,.08)}
+.tag-new{color:var(--accent3);border-color:rgba(71,197,255,.3);background:rgba(71,197,255,.08)}
+.tag-hot{color:var(--red);border-color:rgba(255,77,77,.3);background:rgba(255,77,77,.08)}
+.article-title{font-family:var(--font-disp);font-size:clamp(32px,5vw,52px);line-height:.95;letter-spacing:.02em;margin-bottom:16px}
+.article-meta{font-family:var(--font-mono);font-size:11px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap}
+.prose h2{font-family:var(--font-disp);font-size:28px;letter-spacing:.03em;margin:36px 0 14px}
+.prose p{color:#c8c7c0;margin-bottom:14px;line-height:1.75}.prose ul{color:#c8c7c0;margin:0 0 14px 20px;line-height:1.75}.prose li{margin-bottom:6px}.prose strong{color:var(--text);font-weight:500}
+.callout{border-radius:8px;padding:13px 16px;margin:18px 0;border-left:3px solid;font-size:14px;line-height:1.6}
+.callout-tip{background:rgba(29,158,117,.08);border-color:var(--green);color:#a5d9c7}
+.callout-info{background:rgba(71,197,255,.08);border-color:var(--accent3);color:#9addf5}
+.callout-title{font-weight:500;color:var(--text);margin-bottom:4px;font-size:11px;letter-spacing:.06em;font-family:var(--font-mono);text-transform:uppercase}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px}
+.stat-val{font-family:var(--font-disp);font-size:30px;letter-spacing:.04em;color:var(--accent);line-height:1}
+.stat-lbl{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.mode-card{background:var(--bg2);border:1px solid var(--border);border-left:3px solid;border-radius:10px;padding:20px;margin:12px 0;transition:border-color .2s}
+.mode-card:hover{border-top-color:var(--border2);border-right-color:var(--border2);border-bottom-color:var(--border2)}
+.mode-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:12px}
+.mode-badge{font-family:var(--font-disp);font-size:11px;padding:4px 10px;border-radius:4px;flex-shrink:0;margin-top:2px;letter-spacing:.06em;border:1px solid}
+.mode-info{flex:1}
+.mode-name{font-size:16px;font-weight:500;color:var(--text);margin-bottom:4px}
+.mode-tagline{font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.mode-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:10px}
+.mode-tips{padding:10px 12px;background:rgba(232,255,71,.04);border:1px solid rgba(232,255,71,.1);border-radius:6px;font-size:12px;color:#b8c870;font-family:var(--font-mono)}
+.mode-new{background:rgba(71,197,255,.08);color:var(--accent3);border-color:rgba(71,197,255,.3)}
+.mode-returning{background:rgba(120,120,130,.08);color:#aaa;border-color:rgba(120,120,130,.3)}
+.sidebar{display:flex;flex-direction:column;gap:14px}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sidebar-card-title{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.sidebar-links{list-style:none;display:flex;flex-direction:column;gap:2px}
+.sidebar-links a{font-size:13px;color:var(--muted);padding:5px 8px;border-radius:5px;display:block;transition:background .15s,color .15s}
+.sidebar-links a:hover{background:var(--bg3);color:var(--text)}.sidebar-links a.current{color:var(--accent);background:rgba(232,255,71,.06)}
+footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2)}
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}.nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}.content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}.stat-row{grid-template-columns:1fr 1fr}
+  .prose h2{font-size:22px}
+}
+@media(max-width:480px){.stat-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html" class="active">Advanced</a></li>
+  </ul>
+  <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html" class="active">Advanced</a>
+  <div class="nav-drawer-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+</div>
+
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span style="color:var(--muted2)">/</span>Multiplayer Guide</div>
+  <div class="content-wrap">
+    <main>
+      <div class="article-header">
+        <div class="article-tags"><span class="tag tag-multi">Multiplayer</span><span class="tag tag-new">New modes</span><span class="tag tag-hot">Hot</span></div>
+        <h1 class="article-title">FH6 Multiplayer Guide — All Horizon Play Modes</h1>
+        <div class="article-meta"><span>Updated May 22, 2026</span><span>6 online modes</span><span>Up to 72 players</span></div>
+      </div>
+      <div class="prose">
+        <div class="stat-row">
+          <div class="stat-card"><div class="stat-val">6</div><div class="stat-lbl">Online modes</div></div>
+          <div class="stat-card"><div class="stat-val">72</div><div class="stat-lbl">Max shared-world players</div></div>
+          <div class="stat-card"><div class="stat-val">12</div><div class="stat-lbl">Max convoy size</div></div>
+        </div>
+
+        <p>Forza Horizon 6 bundles all multiplayer under a single system called <strong>Horizon Play</strong>. Every online mode — competitive races, drift events, battle royale, and co-op exploration — lives here. Unlike previous Forza games with scattered menus, everything is one click away from the main Horizon Play panel.</p>
+
+        <p>Horizon Play has its own independent leveling system, separate from the single-player Wristband and Stamp tracks. <strong>Every online match earns Horizon Play XP</strong>, and every level up to 25 also awards Festival Points — meaning playing online literally advances your campaign Wristband progression simultaneously.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Horizon Play unlocks after the Prologue</div>
+          All multiplayer modes become available after the Tokyo opening drive — you don't need to earn any Wristbands first. Jump into Spec Racing or Touge Showdown immediately if you want.
+        </div>
+
+        <h2>All 6 Horizon Play modes</h2>
+
+        <div class="mode-card" style="border-left-color:var(--accent3)">
+          <div class="mode-header">
+            <span class="mode-badge mode-new">NEW</span>
+            <div class="mode-info">
+              <div class="mode-name">Spec Racing</div>
+              <div class="mode-tagline">Everyone drives the exact same car — pure skill, no garage advantage</div>
+            </div>
+          </div>
+          <div class="mode-desc">The biggest new addition to FH6 multiplayer. In Spec Racing, every player drives the identical car with the same stock tune, same tires, same setup. No meta builds, no expensive purchases, no downloaded tunes. The only differentiator is driver skill. Races rotate through different cars and classes weekly — one week identical Mazda MX-5s on a mountain pass, the next matching GT-Rs on Tokyo's C1 loop. Learning to adapt quickly to different cars is the real skill challenge.</div>
+          <div class="mode-tips">Best for: players frustrated by meta abuse in standard online racing. Spec Racing is FH6's answer to the long-standing community request for fair, skill-first competition.</div>
+        </div>
+
+        <div class="mode-card" style="border-left-color:var(--accent2)">
+          <div class="mode-header">
+            <span class="mode-badge mode-new">NEW</span>
+            <div class="mode-info">
+              <div class="mode-name">Touge Showdown</div>
+              <div class="mode-tagline">1v1 mountain pass head-to-head — the most Japanese mode in Forza history</div>
+            </div>
+          </div>
+          <div class="mode-desc">Built around Japan's mountain-pass racing culture. Two players race 1v1 across five preset tight, technical mountain routes in a lead/chase format — both players race each route, swapping leader and chaser roles. Three races per match. Knowing the routes is half the battle — brake points, corner apexes, where the road narrows. <strong>Crashing into the leader as chaser costs you points. Going off-road as leader gives your opponent free distance.</strong> Clean, consistent driving wins over aggressive moves.</div>
+          <div class="mode-tips">Five preset routes rotate through matchmaking continuously. The championship mode cycles all five routes back-to-back for anyone who wants extended head-to-head competition.</div>
+        </div>
+
+        <div class="mode-card" style="border-left-color:var(--amber)">
+          <div class="mode-header">
+            <span class="mode-badge mode-returning">RETURNING</span>
+            <div class="mode-info">
+              <div class="mode-name">The Eliminator</div>
+              <div class="mode-tagline">Battle royale — last driver standing wins</div>
+            </div>
+          </div>
+          <div class="mode-desc">The fan-favourite battle royale mode returns. All players start in the same low-tier car — <strong>a 1984 Honda City</strong> — giving every match an equal, chaotic start. The map shrinks via a closing safe zone. Challenge other players to 1v1 races: the winner upgrades their car class, the loser is eliminated. Winning enough duels lets you reach S2 class before the final showdown. Last player inside the safe zone wins.</div>
+          <div class="mode-tips">Tip: Don't upgrade your car too early. A nimble, lower-class car is often better than a powerful one that's hard to control as the safe zone closes. Use the terrain to your advantage.</div>
+        </div>
+
+        <div class="mode-card" style="border-left-color:var(--purple)">
+          <div class="mode-header">
+            <span class="mode-badge mode-returning">RETURNING</span>
+            <div class="mode-info">
+              <div class="mode-name">Hide & Seek</div>
+              <div class="mode-tagline">One hider vs five seekers — stealth driving in open-world Japan</div>
+            </div>
+          </div>
+          <div class="mode-desc">One player becomes the Hider and must stay hidden from five Seekers across Japan's open world for the full duration. Hiders use terrain, buildings, and forests to stay concealed. Seekers use the minimap and line-of-sight to track them down. Both roles unlock separate achievements — you need to play both sides for 100% completion.</div>
+          <div class="mode-tips">Hider tip: Japan's dense forests and mountain terrain are your best friends. Avoid open roads. Seeker tip: converge from multiple directions — a lone seeker is easy to evade.</div>
+        </div>
+
+        <div class="mode-card" style="border-left-color:var(--green)">
+          <div class="mode-header">
+            <span class="mode-badge mode-returning">RETURNING</span>
+            <div class="mode-info">
+              <div class="mode-name">Horizon Racing</div>
+              <div class="mode-tagline">Standard online racing across all terrain types</div>
+            </div>
+          </div>
+          <div class="mode-desc">Classic multiplayer racing across Road, Dirt, Cross Country, Street, and Touge event types. Players bring their own tuned cars within a set class bracket. Regular matchmaking with rotating event types. Also includes The Trial — a co-op championship where 6 players team up to beat Unbeatable AI. The Trial is available each Festival Playlist week and is required for maximum Playlist Points.</div>
+          <div class="mode-tips">The Trial is the hardest weekly Playlist activity — 6 players vs Unbeatable AI. Use Discord or the in-game LFG to find coordinated teammates. 5 points per win, worth the effort for completionists.</div>
+        </div>
+
+        <div class="mode-card" style="border-left-color:#f06cb4">
+          <div class="mode-header">
+            <span class="mode-badge mode-returning">RETURNING</span>
+            <div class="mode-info">
+              <div class="mode-name">Horizon Drift</div>
+              <div class="mode-tagline">Competitive drifting championship — highest score wins</div>
+            </div>
+          </div>
+          <div class="mode-desc">Competitive online drifting. Players score points for drift angle, speed, and clean transitions. The highest cumulative score wins — not finishing position. Great for players who have invested in dedicated drift builds and want to showcase them competitively. Also a strong earning mode for Horizon Play XP if you have a well-tuned drift car.</div>
+          <div class="mode-tips">Horizon Drift scores angle × speed — not just survival. A fast, shallow drift consistently beats slow, deep drifts. See the <a href="drift-guide.html" style="color:var(--accent3)">drift guide</a> for optimal builds.</div>
+        </div>
+
+        <h2>Convoy — open-world co-op</h2>
+        <p>Convoy is the foundation of FH6's shared-world co-op. Up to <strong>12 players</strong> form a caravan and roam Japan's open world together. Convoy members share Festival Playlist progress, can chain LINK Skills together for bonus XP, and can tackle any open-world activity including Barn Find hunting, PR Stunts, and Story events. No party invite needed — you can also encounter other players spontaneously in the shared world and form impromptu convoys.</p>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Online play advances your campaign</div>
+          Every Horizon Play match earns XP and Festival Points — the same currency that pushes your single-player Wristband progression. Every level up to 25 grants Festival Points directly. Playing multiplayer and advancing your campaign simultaneously is one of FH6's best design decisions.
+        </div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">All modes</div>
+        <ul class="sidebar-links">
+          <li style="font-size:12px;color:var(--accent3);padding:4px 8px;font-family:var(--font-mono)">NEW</li>
+          <li><a href="multiplayer-guide.html" class="current" style="color:var(--accent3)">Spec Racing</a></li>
+          <li><a href="multiplayer-guide.html" class="current" style="color:var(--accent3)">Touge Showdown</a></li>
+          <li style="font-size:12px;color:var(--muted2);padding:4px 8px;font-family:var(--font-mono)">RETURNING</li>
+          <li><a href="multiplayer-guide.html">The Eliminator</a></li>
+          <li><a href="multiplayer-guide.html">Hide &amp; Seek</a></li>
+          <li><a href="multiplayer-guide.html">Horizon Racing</a></li>
+          <li><a href="multiplayer-guide.html">Horizon Drift</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Related guides</div>
+        <ul class="sidebar-links">
+          <li><a href="progression.html">Wristband system</a></li>
+          <li><a href="drift-guide.html">Drift guide</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="festival-playlist.html">Festival Playlist</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card" style="background:rgba(71,197,255,.04);border-color:rgba(71,197,255,.15)">
+        <div class="sidebar-card-title" style="color:var(--accent3)">Start here</div>
+        <p style="font-size:12px;color:#9addf5;line-height:1.6">New to FH6 online? Start with <strong style="color:var(--text)">Spec Racing</strong> — no need to own competitive cars, no meta builds. It's the most skill-fair entry point and gives good XP and Festival Points from the first match.</p>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer>
+  <div><div class="footer-logo">FH6<span>Guide</span></div><div class="footer-note" style="margin-top:5px">Fan-made guide · Not affiliated with Playground Games or Xbox</div></div>
+  <div class="footer-note">© 2026 FH6Guide · fh6guide.org</div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))d.classList.remove('open')});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})});
+</script>
+</body></html>
