@@ -263,6 +263,8 @@ section { padding: 52px 0; }
   flex-direction: column;
   transition: border-color .2s, transform .2s;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 .guide-card:hover {
   border-color: var(--border2);
@@ -643,9 +645,9 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">FH6<span>Guide</span></div>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
   <ul class="nav-links">
-    <li><a href="#" class="active">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="#">Getting Started</a></li>
     <li><a href="#">Cars & Garage</a></li>
     <li><a href="#">Collectibles</a></li>
@@ -722,7 +724,7 @@ footer {
   <div class="hot-grid">
 
     <!-- featured -->
-    <div class="guide-card featured" style="grid-row: 1 / 3;">
+    <a href="barn-finds.html" class="guide-card featured" style="grid-row: 1 / 3;">
       <div class="card-img barn">
         BARN
         <div class="card-img-sub">COLLECTIBLES</div>
@@ -741,7 +743,7 @@ footer {
       </div>
     </div>
 
-    <div class="guide-card">
+    <a href="treasure-cars.html" class="guide-card">
       <div class="card-img treasure" style="height:130px; font-size:40px;">
         TREASURE
         <div class="card-img-sub">COLLECTIBLES</div>
@@ -759,7 +761,7 @@ footer {
       </div>
     </div>
 
-    <div class="guide-card">
+    <a href="car-tier-list.html" class="guide-card">
       <div class="card-img tierlist" style="height:130px; font-size:40px;">
         S-TIER
         <div class="card-img-sub">CARS</div>
@@ -777,7 +779,7 @@ footer {
       </div>
     </div>
 
-    <div class="guide-card">
+    <a href="progression.html" class="guide-card">
       <div class="card-img wrist" style="height:110px; font-size:36px;">
         GOLD
         <div class="card-img-sub">PROGRESSION</div>
@@ -795,7 +797,7 @@ footer {
       </div>
     </div>
 
-    <div class="guide-card">
+    <a href="tuning-guide.html" class="guide-card">
       <div class="card-img tuning" style="height:110px; font-size:36px;">
         TUNE
         <div class="card-img-sub">ADVANCED</div>
