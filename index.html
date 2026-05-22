@@ -252,6 +252,7 @@ section { padding: 52px 0; }
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 12px;
+  align-items: stretch;
 }
 
 .guide-card {
@@ -263,8 +264,7 @@ section { padding: 52px 0; }
   flex-direction: column;
   transition: border-color .2s, transform .2s;
   cursor: pointer;
-  text-decoration: none;
-  color: inherit;
+  min-width: 0;
 }
 .guide-card:hover {
   border-color: var(--border2);
@@ -639,6 +639,152 @@ footer {
 .ticker-item .hi { color: var(--accent); }
 
 /* ── SVG ICONS (inline) ── */
+
+/* ── RESPONSIVE — MOBILE ── */
+
+/* Hamburger button (hidden on desktop) */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 6px;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all .25s;
+}
+
+/* Mobile nav drawer */
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  background: rgba(10,10,12,0.98);
+  border-bottom: 1px solid var(--border2);
+  padding: 12px 0 20px;
+  z-index: 99;
+  flex-direction: column;
+}
+.nav-drawer.open { display: flex; }
+.nav-drawer a {
+  padding: 12px 2rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  display: block;
+  transition: color .15s;
+}
+.nav-drawer a:hover { color: var(--text); }
+.nav-drawer a.active { color: var(--accent); }
+.nav-drawer-search {
+  margin: 12px 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 0 12px;
+  height: 40px;
+}
+.nav-drawer-search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  flex: 1;
+}
+.nav-drawer-search input::placeholder { color: var(--muted2); }
+
+@media (max-width: 768px) {
+
+  /* Nav */
+  .nav-links { display: none; }
+  .nav-search { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* Hero */
+  .hero { padding: 48px 1.25rem 40px; }
+  .hero h1 { font-size: clamp(40px, 12vw, 64px); }
+  .hero-sub { font-size: 14px; }
+  .hero-stats { gap: 20px; flex-wrap: wrap; }
+  .hero-stat-val { font-size: 22px; }
+
+  /* Ticker */
+  .ticker-wrap { height: 32px; }
+  .ticker-item { font-size: 10px; padding: 0 18px; }
+
+  /* Page padding */
+  .page-wrap { padding: 0 1.25rem; }
+
+  /* Hot guides grid — stack to single column */
+  .hot-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .guide-card.featured { grid-row: auto; }
+  .guide-card.featured .card-img { height: 160px; font-size: 56px; }
+
+  /* Section header */
+  .section-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .section-title { font-size: 22px; }
+
+  /* Browse by topic — 2 columns on mobile */
+  .sections-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  /* Progression — stack to single column */
+  .prog-tracks {
+    grid-template-columns: 1fr;
+  }
+  .prog-divider {
+    width: 100%;
+    height: 1px;
+    margin: 16px 0;
+  }
+  .prog-track { padding: 0 !important; }
+
+  /* Weekly banner — stack */
+  .weekly-banner {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .weekly-badge { width: 100%; text-align: left; display: flex; gap: 12px; align-items: center; }
+  .weekly-badge-val { font-size: 22px; }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 1.25rem;
+    gap: 16px;
+  }
+  .footer-links { flex-wrap: wrap; gap: 14px; }
+
+  /* Section padding */
+  section { padding: 36px 0; }
+}
+
+@media (max-width: 480px) {
+  /* Very small screens — 1 column for topic sections too */
+  .sections-row { grid-template-columns: 1fr; }
+  .hero { padding: 36px 1.25rem 32px; }
+  .prog-tracks { gap: 0; }
+}
 </style>
 </head>
 <body>
@@ -648,17 +794,34 @@ footer {
   <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="#">Getting Started</a></li>
-    <li><a href="#">Cars & Garage</a></li>
-    <li><a href="#">Collectibles</a></li>
-    <li><a href="#">Progression</a></li>
-    <li><a href="#">Advanced</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html">Advanced</a></li>
   </ul>
   <div class="nav-search">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     <input type="text" placeholder="Search guides…">
   </div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile nav drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" class="active">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html">Advanced</a>
+  <div class="nav-drawer-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+</div>
 
 <!-- TICKER -->
 <div class="ticker-wrap">
@@ -724,7 +887,7 @@ footer {
   <div class="hot-grid">
 
     <!-- featured -->
-    <a href="barn-finds.html" class="guide-card featured" style="grid-row: 1 / 3;">
+    <div class="guide-card featured" style="grid-row: 1 / 3;" onclick="location.href='barn-finds.html'">
       <div class="card-img barn">
         BARN
         <div class="card-img-sub">COLLECTIBLES</div>
@@ -743,7 +906,7 @@ footer {
       </div>
     </div>
 
-    <a href="treasure-cars.html" class="guide-card">
+    <div class="guide-card" onclick="location.href='treasure-cars.html'">
       <div class="card-img treasure" style="height:130px; font-size:40px;">
         TREASURE
         <div class="card-img-sub">COLLECTIBLES</div>
@@ -761,7 +924,7 @@ footer {
       </div>
     </div>
 
-    <a href="car-tier-list.html" class="guide-card">
+    <div class="guide-card" onclick="location.href='car-tier-list.html'">
       <div class="card-img tierlist" style="height:130px; font-size:40px;">
         S-TIER
         <div class="card-img-sub">CARS</div>
@@ -779,7 +942,7 @@ footer {
       </div>
     </div>
 
-    <a href="progression.html" class="guide-card">
+    <div class="guide-card" onclick="location.href='progression.html'">
       <div class="card-img wrist" style="height:110px; font-size:36px;">
         GOLD
         <div class="card-img-sub">PROGRESSION</div>
@@ -797,7 +960,7 @@ footer {
       </div>
     </div>
 
-    <a href="tuning-guide.html" class="guide-card">
+    <div class="guide-card" onclick="location.href='tuning-guide.html'">
       <div class="card-img tuning" style="height:110px; font-size:36px;">
         TUNE
         <div class="card-img-sub">ADVANCED</div>
@@ -1022,5 +1185,23 @@ footer {
   </ul>
 </footer>
 
+<script>
+function toggleNav() {
+  const drawer = document.getElementById('navDrawer');
+  drawer.classList.toggle('open');
+}
+// Close drawer when clicking outside
+document.addEventListener('click', function(e) {
+  const drawer = document.getElementById('navDrawer');
+  const btn = document.querySelector('.nav-hamburger');
+  if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+    drawer.classList.remove('open');
+  }
+});
+// Close drawer on link click
+document.querySelectorAll('.nav-drawer a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navDrawer').classList.remove('open'));
+});
+</script>
 </body>
 </html>

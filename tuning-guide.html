@@ -82,6 +82,43 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-i
 .footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}
 .footer-logo span{color:var(--muted)}
 .footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2)}
+
+/* ── RESPONSIVE — MOBILE ── */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .25s}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}
+.nav-drawer.open{display:flex}
+.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}
+.nav-drawer a:hover{color:var(--text)}
+.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}
+.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}
+.nav-drawer-search input::placeholder{color:var(--muted2)}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-search{display:none}
+  .nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}
+  .content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}
+  .stat-row{grid-template-columns:1fr 1fr}
+  .prose h2{font-size:22px;margin:28px 0 12px}
+  .prose p,.prose ul,.prose ol{font-size:14px}
+  .guide-table{font-size:12px}
+  .guide-table th,.guide-table td{padding:7px 8px}
+  .car-entry{padding:14px}
+  .callout{font-size:13px}
+  .steps{gap:0}
+  .step{padding:10px 0}
+  .diff-table{font-size:12px}
+  .diff-table th,.diff-table td{padding:7px 8px}
+  .breadcrumb{font-size:11px;padding:10px 0}
+}
+@media(max-width:480px){
+  .stat-row{grid-template-columns:1fr}
+  .article-title{font-size:clamp(26px,9vw,38px)}
+}
 </style>
 </head>
 <body>
@@ -93,13 +130,29 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-i
     <li><a href="cars.html">Cars</a></li>
     <li><a href="collectibles.html">Collectibles</a></li>
     <li><a href="progression.html">Progression</a></li>
-    <li><a href="advanced.html" class="active">Advanced</a></li>
+    <li><a href="tuning-guide.html" class="active">Advanced</a></li>
   </ul>
   <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- Mobile nav drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html">Advanced</a>
+  <div class="nav-drawer-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+</div>
 
 <div class="page-wrap">
-  <div class="breadcrumb"><a href="index.html">Home</a> <span style="color:var(--muted2)">/</span> <a href="advanced.html">Advanced &amp; Setup</a> <span style="color:var(--muted2)">/</span> Tuning Guide</div>
+  <div class="breadcrumb"><a href="index.html">Home</a> <span style="color:var(--muted2)">/</span> <a href="tuning-guide.html">Advanced &amp; Setup</a> <span style="color:var(--muted2)">/</span> Tuning Guide</div>
 
   <div class="content-wrap">
     <main>
@@ -264,4 +317,21 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-i
   <div><div class="footer-logo">FH6<span>Guide</span></div><div class="footer-note" style="margin-top:5px;">Fan-made guide · Not affiliated with Playground Games or Xbox</div></div>
   <div class="footer-note">© 2026 FH6Guide</div>
 </footer>
+<script>
+function toggleNav(){
+  document.getElementById('navDrawer').classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  var d=document.getElementById('navDrawer');
+  var b=document.querySelector('.nav-hamburger');
+  if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target)){
+    d.classList.remove('open');
+  }
+});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('navDrawer').classList.remove('open');
+  });
+});
+</script>
 </body></html>
