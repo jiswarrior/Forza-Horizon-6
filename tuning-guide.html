@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Tuning Guide — Every Setting Explained [2026] | FH6Guide</title>
+<meta name="description" content="Complete FH6 tuning guide for beginners. Tires, suspension, differential, gearing — every setting explained with what to change and why.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0c;--bg2:#111116;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#e8ff47;--accent2:#ff6b35;--accent3:#47c5ff;--text:#f0efe8;--muted:#7a7a88;--muted2:#4a4a58;--green:#1D9E75;--amber:#BA7517;--red:#ff4d4d;--font-disp:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}
+.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}
+.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;flex-shrink:0}
+.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:160px}
+.nav-search input::placeholder{color:var(--muted2)}
+.page-wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+.breadcrumb{padding:14px 0;font-size:12px;color:var(--muted);font-family:var(--font-mono);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
+.breadcrumb a{color:var(--muted)}
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+.article-header{padding:0 0 28px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.article-tags{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid}
+.tag-advanced{color:var(--accent2);border-color:rgba(255,107,53,.3);background:rgba(255,107,53,.08)}
+.tag-hot{color:var(--red);border-color:rgba(255,77,77,.3);background:rgba(255,77,77,.08)}
+.tag-beginner{color:var(--green);border-color:rgba(29,158,117,.3);background:rgba(29,158,117,.08)}
+.article-title{font-family:var(--font-disp);font-size:clamp(32px,5vw,52px);line-height:.95;letter-spacing:.02em;margin-bottom:16px}
+.article-meta{font-family:var(--font-mono);font-size:11px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap}
+.prose h2{font-family:var(--font-disp);font-size:28px;letter-spacing:.03em;margin:36px 0 14px}
+.prose h3{font-size:15px;font-weight:500;margin:18px 0 8px;color:var(--text)}
+.prose p{color:#c8c7c0;margin-bottom:14px;line-height:1.75}
+.prose ul{color:#c8c7c0;margin:0 0 14px 20px;line-height:1.75}
+.prose li{margin-bottom:5px}
+.prose strong{color:var(--text);font-weight:500}
+.callout{border-radius:8px;padding:13px 16px;margin:18px 0;border-left:3px solid;font-size:14px;line-height:1.6}
+.callout-tip{background:rgba(29,158,117,.08);border-color:var(--green);color:#a5d9c7}
+.callout-info{background:rgba(71,197,255,.08);border-color:var(--accent3);color:#9addf5}
+.callout-warn{background:rgba(186,117,23,.08);border-color:var(--amber);color:#d4a96a}
+.callout-title{font-weight:500;color:var(--text);margin-bottom:4px;font-size:11px;letter-spacing:.06em;font-family:var(--font-mono);text-transform:uppercase}
+
+/* Tuning sections */
+.tune-section{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;margin:12px 0}
+.tune-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.tune-icon{font-family:var(--font-disp);font-size:20px;color:var(--accent2);width:36px;text-align:center;flex-shrink:0}
+.tune-name{font-size:15px;font-weight:500;color:var(--text)}
+.tune-sub{font-size:11px;color:var(--muted);font-family:var(--font-mono);margin-top:1px}
+.tune-settings{display:flex;flex-direction:column;gap:0}
+.ts-row{display:grid;grid-template-columns:160px 1fr 1fr;gap:0;border-bottom:1px solid var(--border);padding:10px 0}
+.ts-row:last-child{border-bottom:none}
+.ts-name{font-size:13px;font-weight:500;color:var(--text)}
+.ts-low{font-size:12px;color:#47c5ff;font-family:var(--font-mono)}
+.ts-high{font-size:12px;color:var(--accent2);font-family:var(--font-mono)}
+.ts-header{display:grid;grid-template-columns:160px 1fr 1fr;gap:0;padding:0 0 6px;margin-bottom:4px;border-bottom:1px solid var(--border2)}
+.ts-header span{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tune-note{margin-top:12px;font-size:12px;color:var(--muted);line-height:1.6;padding:10px 12px;background:var(--bg3);border-radius:6px}
+
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.prob-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px}
+.prob-symptom{font-size:13px;font-weight:500;color:var(--red);margin-bottom:6px}
+.prob-fix{font-size:12px;color:var(--muted);line-height:1.5}
+.prob-fix strong{color:var(--text)}
+
+.sidebar{display:flex;flex-direction:column;gap:14px}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sidebar-card-title{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.sidebar-links{list-style:none;display:flex;flex-direction:column;gap:2px}
+.sidebar-links a{font-size:13px;color:var(--muted);padding:5px 8px;border-radius:5px;display:block;transition:background .15s,color .15s}
+.sidebar-links a:hover{background:var(--bg3);color:var(--text)}
+.sidebar-links a.current{color:var(--accent);background:rgba(232,255,71,.06)}
+.toc-links{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-links a{font-size:12px;color:var(--muted);padding:4px 8px;border-radius:4px;display:block;transition:color .15s;font-family:var(--font-mono)}
+.toc-links a:hover{color:var(--text)}
+footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}
+.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="fh6guide.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="fh6guide.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="cars.html">Cars</a></li>
+    <li><a href="collectibles.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="advanced.html" class="active">Advanced</a></li>
+  </ul>
+  <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+</nav>
+
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="fh6guide.html">Home</a> <span style="color:var(--muted2)">/</span> <a href="advanced.html">Advanced &amp; Setup</a> <span style="color:var(--muted2)">/</span> Tuning Guide</div>
+
+  <div class="content-wrap">
+    <main>
+      <div class="article-header">
+        <div class="article-tags"><span class="tag tag-advanced">Advanced</span><span class="tag tag-beginner">Beginner-friendly</span><span class="tag tag-hot">Hot</span></div>
+        <h1 class="article-title">FH6 Tuning Guide — Every Setting Explained</h1>
+        <div class="article-meta"><span>Updated May 21, 2026</span><span>~12 min read</span><span>Beginner to intermediate</span></div>
+      </div>
+
+      <div class="prose">
+        <p>Tuning in Forza Horizon 6 is the difference between a car that fights you through corners and one that feels planted and fast. This guide explains <strong>every tuning setting</strong>, what it does, and whether you should go lower or higher based on your symptoms — no engineering degree required.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Skip the defaults</div>
+          Auto-Upgrade sets stats to default values optimized for nothing in particular. Manual tuning — even small changes to tires and differential — immediately makes a car noticeably faster and more controllable.
+        </div>
+
+        <h2>The tuning order</h2>
+        <p>Always tune in this order. Each layer affects the next:</p>
+        <ol style="color:#c8c7c0;margin:0 0 14px 20px;line-height:2;">
+          <li><strong>Tires</strong> — compound and pressure. Biggest single impact on handling.</li>
+          <li><strong>Suspension</strong> — springs, dampers, anti-roll bars, ride height</li>
+          <li><strong>Differential</strong> — how power splits between wheels</li>
+          <li><strong>Brake balance</strong> — front vs rear braking bias</li>
+          <li><strong>Gearing</strong> — final drive and gear ratios</li>
+          <li><strong>Alignment</strong> — camber, toe, caster (fine-tuning last)</li>
+          <li><strong>Aero</strong> — downforce front/rear (high-speed cars only)</li>
+        </ol>
+
+        <h2>Tires</h2>
+        <div class="tune-section">
+          <div class="tune-header">
+            <div class="tune-icon">◎</div>
+            <div><div class="tune-name">Tire pressure</div><div class="tune-sub">Front and rear · measured in PSI · affects grip and wear</div></div>
+          </div>
+          <div class="ts-header"><span>Setting</span><span>Lower value →</span><span>Higher value →</span></div>
+          <div class="tune-settings">
+            <div class="ts-row"><div class="ts-name">Front pressure</div><div class="ts-low">More mechanical grip, slower steering response</div><div class="ts-high">Sharper turn-in, less peak grip</div></div>
+            <div class="ts-row"><div class="ts-name">Rear pressure</div><div class="ts-low">More traction, more understeer tendency</div><div class="ts-high">More rotation, oversteer risk</div></div>
+          </div>
+          <div class="tune-note">Starting point: 28–32 PSI front and rear for road racing. Drift builds: raise rear to 35–40 PSI. Cross-country: drop both 2–4 PSI for more grip on loose surfaces. Always test in Rivals before committing.</div>
+        </div>
+
+        <h2>Suspension</h2>
+        <div class="tune-section">
+          <div class="tune-header">
+            <div class="tune-icon">⊢</div>
+            <div><div class="tune-name">Springs & ride height</div><div class="tune-sub">Controls body roll, cornering stability, and ground clearance</div></div>
+          </div>
+          <div class="ts-header"><span>Setting</span><span>Softer / Lower →</span><span>Stiffer / Higher →</span></div>
+          <div class="tune-settings">
+            <div class="ts-row"><div class="ts-name">Spring stiffness</div><div class="ts-low">More body roll, better bump absorption, good for dirt</div><div class="ts-high">Less roll, sharper response, good for tarmac</div></div>
+            <div class="ts-row"><div class="ts-name">Ride height</div><div class="ts-low">Lower center of gravity, better aero, harder to ground</div><div class="ts-high">More clearance for off-road and rough terrain</div></div>
+            <div class="ts-row"><div class="ts-name">Anti-roll bars</div><div class="ts-low">More rotation through corners, looser feel</div><div class="ts-high">More stability, flatter cornering, can cause understeer</div></div>
+          </div>
+          <div class="tune-note">Road racing: lower ride height as far as possible without grounding, stiffen springs 20–30% from default. Off-road: keep ride height at stock or raise slightly. Soften anti-roll bars front and rear to help the suspension articulate on bumps.</div>
+        </div>
+
+        <div class="tune-section">
+          <div class="tune-header">
+            <div class="tune-icon">⊣</div>
+            <div><div class="tune-name">Dampers (rebound & bump)</div><div class="tune-sub">Controls how fast the suspension moves — independent from spring stiffness</div></div>
+          </div>
+          <div class="ts-header"><span>Setting</span><span>Lower →</span><span>Higher →</span></div>
+          <div class="tune-settings">
+            <div class="ts-row"><div class="ts-name">Rebound stiffness</div><div class="ts-low">Suspension extends faster, can cause bounce</div><div class="ts-high">Suspension extends slower, more controlled</div></div>
+            <div class="ts-row"><div class="ts-name">Bump stiffness</div><div class="ts-low">Suspension compresses faster, absorbs bumps well</div><div class="ts-high">Suspension compresses slower, firmer over bumps</div></div>
+          </div>
+          <div class="tune-note">Rule of thumb: rebound should be slightly higher than bump (roughly 3:2 ratio). For a 5.0 bump, try 7.0–8.0 rebound. Avoid maxing either — the extremes feel unnatural and are hard to control.</div>
+        </div>
+
+        <h2>Differential</h2>
+        <div class="tune-section">
+          <div class="tune-header">
+            <div class="tune-icon">⊕</div>
+            <div><div class="tune-name">Differential (diff) — the most impactful single setting</div><div class="tune-sub">Controls torque split between wheels · affects traction and rotation heavily</div></div>
+          </div>
+          <div class="ts-header"><span>Setting</span><span>Lower % →</span><span>Higher % →</span></div>
+          <div class="tune-settings">
+            <div class="ts-row"><div class="ts-name">Front accel</div><div class="ts-low">More understeer on throttle, safer for beginners</div><div class="ts-high">Better front traction on throttle exit</div></div>
+            <div class="ts-row"><div class="ts-name">Rear accel</div><div class="ts-low">Rear spins up easily, more rotation, drift-friendly</div><div class="ts-high">Better traction on exit, locks up rear diff</div></div>
+            <div class="ts-row"><div class="ts-name">Rear decel</div><div class="ts-low">Easier trail braking, looser entry</div><div class="ts-high">More stability on braking, can cause snap oversteer</div></div>
+          </div>
+          <div class="tune-note">Road racing RWD: try rear accel 25–35%, rear decel 15–20%. AWD: front accel 25%, rear accel 30–40% for balanced power. Drift builds: lower rear accel to 15–20% and raise rear decel to 30%+ for sustained slides.</div>
+        </div>
+
+        <h2>Brakes & gearing</h2>
+        <div class="tune-section">
+          <div class="tune-header">
+            <div class="tune-icon">⊗</div>
+            <div><div class="tune-name">Brake balance & gearing</div><div class="tune-sub">Bias and ratio tuning for specific event types</div></div>
+          </div>
+          <div class="ts-header"><span>Setting</span><span>Lower →</span><span>Higher →</span></div>
+          <div class="tune-settings">
+            <div class="ts-row"><div class="ts-name">Brake balance</div><div class="ts-low">More rear braking — helps trail brake but risks spin</div><div class="ts-high">More front bias — safer, less rotation on entry</div></div>
+            <div class="ts-row"><div class="ts-name">Final drive ratio</div><div class="ts-low">Lower ratio: more top speed, slower acceleration</div><div class="ts-high">Higher ratio: quicker acceleration, lower top speed</div></div>
+          </div>
+          <div class="tune-note">Starting brake balance: 50% front. Move toward 45% if you want more rear rotation for trail braking. Gearing: tighten ratios for short circuits, open them for Japan's long freeway stretches.</div>
+        </div>
+
+        <h2>Common problems & fixes</h2>
+        <div class="prob-grid">
+          <div class="prob-card"><div class="prob-symptom">Car understeers badly</div><div class="prob-fix"><strong>Lower front anti-roll bar</strong>, soften front springs slightly, reduce front tire pressure 1–2 PSI, lower front differential accel</div></div>
+          <div class="prob-card"><div class="prob-symptom">Car spins out on exit</div><div class="prob-fix"><strong>Raise rear differential accel %</strong>, stiffen rear anti-roll bar, increase rear tire pressure, or switch to a softer rear tire compound</div></div>
+          <div class="prob-card"><div class="prob-symptom">Car bounces over bumps</div><div class="prob-fix"><strong>Reduce bump damping stiffness</strong>, soften springs, check ride height isn't too low for the track surface</div></div>
+          <div class="prob-card"><div class="prob-symptom">Too slow out of corners</div><div class="prob-fix"><strong>Raise final drive ratio</strong> for more acceleration, check differential rear accel isn't too low causing wheel spin</div></div>
+          <div class="prob-card"><div class="prob-symptom">Car snaps in fast corners</div><div class="prob-fix"><strong>Lower rear decel differential</strong>, stiffen front anti-roll slightly, increase rear ride height 0.5cm</div></div>
+          <div class="prob-card"><div class="prob-symptom">Can't keep drift going</div><div class="prob-fix"><strong>Lower rear accel differential to 15–20%</strong>, raise rear tire pressure to 35–40 PSI, soften front suspension for more steering angle</div></div>
+        </div>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Use Rivals mode to test tunes</div>
+          Before committing to a tune for races, run the same section of road 3–4 times in Rivals mode. Small changes feel obvious in direct comparison. Change one setting at a time — multiple changes make it impossible to know what helped.
+        </div>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">In this guide</div>
+        <ul class="toc-links">
+          <li><a href="#">Tuning order</a></li>
+          <li><a href="#">Tires & pressure</a></li>
+          <li><a href="#">Springs & ride height</a></li>
+          <li><a href="#">Dampers</a></li>
+          <li><a href="#">Differential (key!)</a></li>
+          <li><a href="#">Brakes & gearing</a></li>
+          <li><a href="#">Problem diagnosis</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Advanced guides</div>
+        <ul class="sidebar-links">
+          <li><a href="tuning-guide.html" class="current">Tuning guide</a></li>
+          <li><a href="#">Tune share codes</a></li>
+          <li><a href="#">Best PC settings</a></li>
+          <li><a href="#">Drift guide</a></li>
+          <li><a href="#">Controller & wheel setup</a></li>
+          <li><a href="#">Multiplayer — Horizon Play</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card" style="background:rgba(255,107,53,.04);border-color:rgba(255,107,53,.15);">
+        <div class="sidebar-card-title" style="color:var(--accent2);">Quick tune template</div>
+        <p style="font-size:11px;color:#d4a96a;line-height:1.7;font-family:var(--font-mono);">
+          Tires: 28–30 PSI front/rear<br>
+          Springs: +20% from default<br>
+          Ride: lowest possible<br>
+          ARB: stock or slightly lower<br>
+          Rear accel diff: 25–35%<br>
+          Rear decel diff: 15–20%<br>
+          Brake bias: 50% front
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div><div class="footer-logo">FH6<span>Guide</span></div><div class="footer-note" style="margin-top:5px;">Fan-made guide · Not affiliated with Playground Games or Xbox</div></div>
+  <div class="footer-note">© 2026 FH6Guide</div>
+</footer>
+</body></html>
