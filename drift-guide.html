@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Drift Guide — Best Cars, Settings & Tuning [2026] | FH6Guide</title>
+<meta name="description" content="FH6 drift guide for beginners and advanced players. Best drift cars (AE86, Silvia, RX-7, Supra), difficulty settings to change, tune setup, and the best drift zones in Japan.">
+<link rel="canonical" href="https://www.fh6guide.org/drift-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0c;--bg2:#111116;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#e8ff47;--accent2:#ff6b35;--accent3:#47c5ff;--text:#f0efe8;--muted:#7a7a88;--muted2:#4a4a58;--green:#1D9E75;--amber:#BA7517;--red:#ff4d4d;--font-disp:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);transition:color .15s;white-space:nowrap}.nav-links a:hover{color:var(--text)}.nav-links a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;flex-shrink:0}.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:160px}.nav-search input::placeholder{color:var(--muted2)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0;background:none;border:none}.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}.nav-drawer.open{display:flex}.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}.nav-drawer a:hover,.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}.nav-drawer-search input::placeholder{color:var(--muted2)}
+.page-wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+.breadcrumb{padding:14px 0;font-size:12px;color:var(--muted);font-family:var(--font-mono);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}.breadcrumb a{color:var(--muted);transition:color .15s}.breadcrumb a:hover{color:var(--text)}
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+.article-header{padding:0 0 28px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.article-tags{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid}
+.tag-advanced{color:var(--accent2);border-color:rgba(255,107,53,.3);background:rgba(255,107,53,.08)}
+.tag-hot{color:var(--red);border-color:rgba(255,77,77,.3);background:rgba(255,77,77,.08)}
+.tag-japan{color:var(--accent3);border-color:rgba(71,197,255,.3);background:rgba(71,197,255,.08)}
+.article-title{font-family:var(--font-disp);font-size:clamp(32px,5vw,52px);line-height:.95;letter-spacing:.02em;margin-bottom:16px}
+.article-meta{font-family:var(--font-mono);font-size:11px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap}
+.prose h2{font-family:var(--font-disp);font-size:28px;letter-spacing:.03em;margin:36px 0 14px}.prose h3{font-size:15px;font-weight:500;margin:20px 0 8px}
+.prose p{color:#c8c7c0;margin-bottom:14px;line-height:1.75}.prose ul,.prose ol{color:#c8c7c0;margin:0 0 14px 20px;line-height:1.75}.prose li{margin-bottom:6px}.prose strong{color:var(--text);font-weight:500}
+.callout{border-radius:8px;padding:13px 16px;margin:18px 0;border-left:3px solid;font-size:14px;line-height:1.6}
+.callout-tip{background:rgba(29,158,117,.08);border-color:var(--green);color:#a5d9c7}
+.callout-warn{background:rgba(186,117,23,.08);border-color:var(--amber);color:#d4a96a}
+.callout-info{background:rgba(71,197,255,.08);border-color:var(--accent3);color:#9addf5}
+.callout-title{font-weight:500;color:var(--text);margin-bottom:4px;font-size:11px;letter-spacing:.06em;font-family:var(--font-mono);text-transform:uppercase}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px}
+.stat-val{font-family:var(--font-disp);font-size:30px;letter-spacing:.04em;color:var(--accent);line-height:1}
+.stat-lbl{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+/* Settings checklist */
+.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.setting-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.setting-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px}
+.setting-val{font-family:var(--font-mono);font-size:11px;color:var(--accent);margin-bottom:4px}
+.setting-why{font-size:12px;color:var(--muted)}
+/* Car entries */
+.drift-car{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px;margin:10px 0;transition:border-color .2s}
+.drift-car:hover{border-color:var(--border2)}
+.dc-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px}
+.dc-rank{font-family:var(--font-disp);font-size:22px;color:var(--accent2);letter-spacing:.05em;width:36px;height:36px;border-radius:6px;background:rgba(255,107,53,.1);border:1px solid rgba(255,107,53,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dc-info{flex:1}
+.dc-name{font-size:15px;font-weight:500;color:var(--text);margin-bottom:4px}
+.dc-badges{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+.db{font-family:var(--font-mono);font-size:9px;padding:2px 7px;border-radius:3px;border:1px solid}
+.db-beginner{color:var(--green);border-color:rgba(29,158,117,.3);background:rgba(29,158,117,.08)}
+.db-rwd{color:#f06cb4;border-color:rgba(240,108,180,.3);background:rgba(240,108,180,.08)}
+.db-class{color:var(--accent);border-color:rgba(232,255,71,.3);background:rgba(232,255,71,.08)}
+.db-free{color:var(--accent3);border-color:rgba(71,197,255,.3);background:rgba(71,197,255,.08)}
+.db-pro{color:var(--accent2);border-color:rgba(255,107,53,.3);background:rgba(255,107,53,.08)}
+.dc-desc{font-size:13px;color:var(--muted);line-height:1.55}
+.dc-tune{margin-top:10px;padding:9px 12px;background:rgba(232,255,71,.04);border:1px solid rgba(232,255,71,.1);border-radius:6px;font-size:11px;color:#b8c870;font-family:var(--font-mono)}
+/* Zones table */
+.guide-table{width:100%;border-collapse:collapse;font-size:13px;margin:16px 0}
+.guide-table th{text-align:left;padding:8px 12px;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border2);font-weight:400}
+.guide-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:#c8c7c0;vertical-align:top}
+.guide-table tr:last-child td{border-bottom:none}.guide-table tr:hover td{background:var(--bg2)}
+.sidebar{display:flex;flex-direction:column;gap:14px}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sidebar-card-title{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.sidebar-links{list-style:none;display:flex;flex-direction:column;gap:2px}
+.sidebar-links a{font-size:13px;color:var(--muted);padding:5px 8px;border-radius:5px;display:block;transition:background .15s,color .15s}
+.sidebar-links a:hover{background:var(--bg3);color:var(--text)}.sidebar-links a.current{color:var(--accent);background:rgba(232,255,71,.06)}
+footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2)}
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}.nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}.content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}.stat-row{grid-template-columns:1fr 1fr}
+  .settings-grid{grid-template-columns:1fr}.prose h2{font-size:22px}
+  .dc-header{gap:10px}.dc-rank{width:28px;height:28px;font-size:16px}
+}
+@media(max-width:480px){.stat-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html" class="active">Advanced</a></li>
+  </ul>
+  <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html" class="active">Advanced</a>
+  <div class="nav-drawer-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+</div>
+
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a> <span style="color:var(--muted2)">/</span> <a href="tuning-guide.html">Advanced</a> <span style="color:var(--muted2)">/</span> Drift Guide</div>
+  <div class="content-wrap">
+    <main>
+      <div class="article-header">
+        <div class="article-tags"><span class="tag tag-advanced">Advanced</span><span class="tag tag-japan">Japan Map</span><span class="tag tag-hot">Hot</span></div>
+        <h1 class="article-title">FH6 Drift Guide — Best Cars, Settings & Zones</h1>
+        <div class="article-meta"><span>Updated May 22, 2026</span><span>~10 min read</span><span>Beginner to advanced</span></div>
+      </div>
+      <div class="prose">
+        <div class="stat-row">
+          <div class="stat-card"><div class="stat-val">AE86</div><div class="stat-lbl">Best beginner car</div></div>
+          <div class="stat-card"><div class="stat-val">RWD</div><div class="stat-lbl">Recommended drivetrain</div></div>
+          <div class="stat-card"><div class="stat-val">4</div><div class="stat-lbl">Settings to change first</div></div>
+        </div>
+
+        <p>FH6's Japan setting is the dream location for drifting — mountain Touge passes, urban expressways, and coastal roads all reward sideways driving. But drifting in FH6 isn't just about big horsepower. <strong>A well-tuned B-Class car will outscore an untuned S1 car</strong> in most Drift Zones. Smooth throttle control, correct weight transfer, and a dialled-in setup matter more than raw power.</p>
+
+        <h2>Step 1 — change these settings before you drift</h2>
+        <p>The default difficulty assists in FH6 are designed to prevent wheelspin and oversteer — the opposite of what you want for drifting. Before touching the tune menu, open Settings → Difficulty and change these four things:</p>
+
+        <div class="settings-grid">
+          <div class="setting-card">
+            <div class="setting-name">Shifting Mode</div>
+            <div class="setting-val">→ Manual</div>
+            <div class="setting-why">You need precise control over power delivery. Auto shifting will kill your drift angle at the worst moment.</div>
+          </div>
+          <div class="setting-card">
+            <div class="setting-name">Stability Control</div>
+            <div class="setting-val">→ OFF</div>
+            <div class="setting-why">Stability Control actively fights oversteer — it will straighten the car every time you try to hold an angle.</div>
+          </div>
+          <div class="setting-card">
+            <div class="setting-name">Traction Control</div>
+            <div class="setting-val">→ OFF</div>
+            <div class="setting-why">TC cuts power when the rear wheels spin. Without it, you can modulate throttle to control the slide.</div>
+          </div>
+          <div class="setting-card">
+            <div class="setting-name">Drift Mode</div>
+            <div class="setting-val">→ ON (optional)</div>
+            <div class="setting-why">Cuts front wheel power on AWD cars for full RWD behaviour. Useful if you're using an AWD car for drifting.</div>
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <div class="callout-title">Handbrake use</div>
+          The handbrake is your drift entry tool. Tap it briefly to initiate the slide, then control the angle with throttle and countersteer. Don't hold the handbrake — that kills momentum and speed, which collapses your drift score.
+        </div>
+
+        <h2>Best drift cars — ranked by skill level</h2>
+
+        <div class="drift-car">
+          <div class="dc-header">
+            <div class="dc-rank">S</div>
+            <div class="dc-info">
+              <div class="dc-name">1985 Toyota Sprinter Trueno GT Apex (AE86)</div>
+              <div class="dc-badges"><span class="db db-beginner">Best beginner</span><span class="db db-rwd">RWD</span><span class="db db-class">B Class</span></div>
+              <div class="dc-desc">The most iconic drift car in Japanese culture. In FH6's Japan setting, the AE86 is at home on every mountain road and touge pass. Its key strength is <strong>predictability</strong> — you always know what the rear is about to do, making it the best car to learn drift fundamentals. The tight Touge hairpins of Mt. Haruna (Shimanoyama) suit the AE86's light weight and slow speed perfectly.</div>
+            </div>
+          </div>
+          <div class="dc-tune">Tune tip: Keep power modest (~250–300 HP). Lower rear tire pressure to 28 PSI. Rear diff accel: 15–20%. This keeps the car sliding without snapping.</div>
+        </div>
+
+        <div class="drift-car">
+          <div class="dc-header">
+            <div class="dc-rank">S</div>
+            <div class="dc-info">
+              <div class="dc-name">1989 Nissan Silvia K's (S13)</div>
+              <div class="dc-badges"><span class="db db-beginner">Starter car</span><span class="db db-rwd">RWD</span><span class="db db-free">Free from start</span><span class="db db-class">B–A Class</span></div>
+              <div class="dc-desc">One of the three starter cars — everyone has it from day one. The S13 Silvia has a classic front-engine RWD layout, light body, and enough turbocharged power to slide without feeling wild. Its multilink rear suspension gives it the balance that made the Silvia platform legendary. Perfect for learning on the Bandai-Azuma Skyline's wider roads.</div>
+            </div>
+          </div>
+          <div class="dc-tune">Full build: swap in the 2.6 I6-TT engine. Total cost ~120,000 CR. Engine swap gives perfect power/torque ratio for extended drift chains.</div>
+        </div>
+
+        <div class="drift-car">
+          <div class="dc-header">
+            <div class="dc-rank">A</div>
+            <div class="dc-info">
+              <div class="dc-name">1992 Mazda RX-7 Type R (FD)</div>
+              <div class="dc-badges"><span class="db db-rwd">RWD</span><span class="db db-class">A–S1 Class</span></div>
+              <div class="dc-desc">The FD RX-7 is small, low, light, and built around the 13B-REW rotary engine with sequential twin turbos. The rotary's power delivery is uniquely smooth and linear — no sudden torque spike, which makes maintaining drift angle easier than with conventional turbo engines. Community favourite for the Azuma Skyline Drift Zone in Shimanoyama.</div>
+            </div>
+          </div>
+          <div class="dc-tune">Tune tip: The rotary revs high — set your rev limiter shift points higher than you normally would. Run 35 PSI rear tire pressure for controlled rotation.</div>
+        </div>
+
+        <div class="drift-car">
+          <div class="dc-header">
+            <div class="dc-rank">A</div>
+            <div class="dc-info">
+              <div class="dc-name">2020 Toyota GR Supra (A90)</div>
+              <div class="dc-badges"><span class="db db-rwd">RWD</span><span class="db db-class">A–S1 Class</span></div>
+              <div class="dc-desc">The best intermediate drift car. The Supra lets you make small mistakes and recover — it doesn't punish every slip with a spin like more extreme builds. The upgrade potential is enormous (600–700 HP within S1). Performs especially well on Tokyo's wide expressways and the Bandai-Azuma Skyline.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="drift-car">
+          <div class="dc-header">
+            <div class="dc-rank">S+</div>
+            <div class="dc-info">
+              <div class="dc-name">Formula Drift Toyota GR Supra MkIV + Nissan 240SX #777</div>
+              <div class="dc-badges"><span class="db db-pro">Pro / Advanced</span><span class="db db-rwd">RWD</span><span class="db db-free">Free — complete the FD Championship</span></div>
+              <div class="dc-desc">Two of the best drift machines in FH6 — available completely free by completing the Formula Drift Championship in the game. These arrive pre-built with huge steering angle, aggressive factory tuning, and competition-grade angle kits. Where a stock car runs out of lock mid-slide, these just keep rotating. You barely need to touch the upgrade menu.</div>
+            </div>
+          </div>
+          <div class="dc-tune">How to get: Complete the Forza Horizon 6 Formula Drift Championship event series — both cars unlock as rewards.</div>
+        </div>
+
+        <h2>Best drift zones in Japan</h2>
+        <table class="guide-table">
+          <thead><tr><th>Zone / Location</th><th>Region</th><th>Best car type</th><th>What makes it good</th></tr></thead>
+          <tbody>
+            <tr><td style="color:var(--text);font-weight:500">Mt. Haruna Touge (Bandai-Azuma)</td><td>Shimanoyama</td><td>AE86, light RWD</td><td>Tight 180° hairpins, technical descents — the quintessential Initial D-style touge</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Bandai-Azuma Skyline Drift Zone</td><td>Shimanoyama</td><td>Silvia, RX-7</td><td>Wide mountain roads with flowing sections. Community's most popular dedicated drift zone</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Tokyo Expressways</td><td>Tokyo City</td><td>Supra, FD machines</td><td>Elevated smooth tarmac, wide sweepers. Open angle drifts on highway sections score very high</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Azuma Skyline Drift Zone</td><td>Ohtani / Takashiro</td><td>RX-7, Silvia</td><td>One of the highest-scoring dedicated PR Stunt drift zones. RX-7 is community favourite here</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Coastal Nangan Roads</td><td>Nangan</td><td>Any RWD</td><td>Sweeping coastal corners with natural rhythm. Good for learning linked transition drifts</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quick drift tune baseline</h2>
+        <p>For any RWD drift build, start with these numbers and adjust from there:</p>
+        <ul>
+          <li><strong>Front tire pressure:</strong> 28–30 PSI</li>
+          <li><strong>Rear tire pressure:</strong> 35–40 PSI (higher rear = more rotation)</li>
+          <li><strong>Front anti-roll bar:</strong> softer than stock (more steering angle)</li>
+          <li><strong>Rear anti-roll bar:</strong> slightly stiffer than stock (stability)</li>
+          <li><strong>Rear differential accel:</strong> 15–20% (lower = easier to initiate, more rotation)</li>
+          <li><strong>Rear differential decel:</strong> 25–35% (prevents snap oversteer on corner exit)</li>
+          <li><strong>Brake balance:</strong> 45% front (slight rear bias aids trail braking entry)</li>
+        </ul>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Score more — angle + speed together</div>
+          FH6 Drift Zones reward <strong>angle multiplied by speed</strong> — not just survival. A shallow, fast drift scores better than a deep, slow one. Don't brake to hold angle. Instead, modulate throttle to maintain speed while holding the slide. The Bandai-Azuma Skyline Drift Zone is the best place to practice this because the wide road gives you room to experiment without hitting barriers.
+        </div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Advanced guides</div>
+        <ul class="sidebar-links">
+          <li><a href="tuning-guide.html">Tuning guide</a></li>
+          <li><a href="drift-guide.html" class="current">Drift guide</a></li>
+          <li><a href="tune-share-codes.html">Tune share codes</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Best drift cars at a glance</div>
+        <div style="display:flex;flex-direction:column;gap:4px;font-size:12px">
+          <div style="padding:5px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Beginner:</strong> <span style="color:var(--muted)">AE86, Silvia K's</span></div>
+          <div style="padding:5px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Intermediate:</strong> <span style="color:var(--muted)">RX-7 FD, Supra A90</span></div>
+          <div style="padding:5px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Advanced:</strong> <span style="color:var(--muted)">FD Supra MkIV, 240SX</span></div>
+          <div style="padding:5px 0"><strong style="color:var(--text)">Free pro cars:</strong> <span style="color:var(--muted)">Complete FD Championship</span></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Related guides</div>
+        <ul class="sidebar-links">
+          <li><a href="car-tier-list.html">Car tier list</a></li>
+          <li><a href="japan-map.html">Japan map guide</a></li>
+          <li><a href="xp-credits-farming.html">Credits farming</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer>
+  <div><div class="footer-logo">FH6<span>Guide</span></div><div class="footer-note" style="margin-top:5px">Fan-made guide · Not affiliated with Playground Games or Xbox</div></div>
+  <div class="footer-note">© 2026 FH6Guide · fh6guide.org</div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))d.classList.remove('open')});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})});
+</script>
+</body></html>
