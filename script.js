@@ -997,11 +997,11 @@ footer {
       </div>
       <div class="sc-title">Getting Started</div>
       <ul class="sc-pages">
-        <li>Beginner's guide</li>
-        <li>Best starter car</li>
-        <li>Fast travel</li>
-        <li>Player houses</li>
-        <li>Credits farming</li>
+        <li><a href="getting-started.html" style="color:var(--muted)">Beginner's guide</a></li>
+        <li><a href="player-houses.html" style="color:var(--muted)">Player houses</a></li>
+        <li><a href="xp-credits-farming.html" style="color:var(--muted)">Credits farming</a></li>
+        <li><a href="xp-boards.html" style="color:var(--muted)">XP Boards (200)</a></li>
+        <li><a href="festival-playlist.html" style="color:var(--muted)">Festival Playlist</a></li>
       </ul>
     </div>
 
@@ -1011,11 +1011,10 @@ footer {
       </div>
       <div class="sc-title">Cars & Garage</div>
       <ul class="sc-pages">
-        <li>Full car list</li>
-        <li>Car tier list</li>
-        <li>Best cars by class</li>
-        <li>Auction house tips</li>
-        <li>Pre-owned cars</li>
+        <li><a href="car-tier-list.html" style="color:var(--muted)">Car tier list</a></li>
+        <li><a href="car-tier-list.html" style="color:var(--muted)">Best cars by class</a></li>
+        <li><a href="xp-credits-farming.html" style="color:var(--muted)">Auction house tips</a></li>
+        <li><a href="car-tier-list.html" style="color:var(--muted)">Pre-owned cars</a></li>
       </ul>
     </div>
 
@@ -1025,11 +1024,10 @@ footer {
       </div>
       <div class="sc-title">Collectibles & Map</div>
       <ul class="sc-pages">
-        <li>All 15 Barn Finds</li>
-        <li>All 9 Treasure Cars</li>
-        <li>Japan map guide</li>
-        <li>XP boards</li>
-        <li>Photo challenges</li>
+        <li><a href="barn-finds.html" style="color:var(--muted)">All 15 Barn Finds</a></li>
+        <li><a href="treasure-cars.html" style="color:var(--muted)">All 9 Treasure Cars</a></li>
+        <li><a href="japan-map.html" style="color:var(--muted)">Japan map guide</a></li>
+        <li><a href="xp-boards.html" style="color:var(--muted)">XP Boards (200)</a></li>
       </ul>
     </div>
 
@@ -1039,11 +1037,10 @@ footer {
       </div>
       <div class="sc-title">Progression</div>
       <ul class="sc-pages">
-        <li>Wristband system</li>
-        <li>Legend Island unlock</li>
-        <li>XP farming</li>
-        <li>Festival Playlist</li>
-        <li>Achievements</li>
+        <li><a href="progression.html" style="color:var(--muted)">Wristband system</a></li>
+        <li><a href="progression.html" style="color:var(--muted)">Legend Island unlock</a></li>
+        <li><a href="xp-credits-farming.html" style="color:var(--muted)">XP &amp; Credits farming</a></li>
+        <li><a href="festival-playlist.html" style="color:var(--muted)">Festival Playlist</a></li>
       </ul>
     </div>
 
@@ -1053,11 +1050,9 @@ footer {
       </div>
       <div class="sc-title">Advanced & Setup</div>
       <ul class="sc-pages">
-        <li>Tuning guide</li>
-        <li>Tune share codes</li>
-        <li>Best PC settings</li>
-        <li>Drift guide</li>
-        <li>Controller & wheel</li>
+        <li><a href="tuning-guide.html" style="color:var(--muted)">Tuning guide</a></li>
+        <li><a href="tune-share-codes.html" style="color:var(--muted)">Tune share codes</a></li>
+        <li><a href="drift-guide.html" style="color:var(--muted)">Drift guide</a></li>
       </ul>
     </div>
 
