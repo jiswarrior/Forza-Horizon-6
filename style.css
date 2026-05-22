@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FH6 Guide — Forza Horizon 6 Wiki & Tips</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0a0a0c;
+  --bg2:       #111116;
+  --bg3:       #18181f;
+  --bg4:       #1f1f28;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.12);
+  --accent:    #e8ff47;
+  --accent2:   #ff6b35;
+  --accent3:   #47c5ff;
+  --text:      #f0efe8;
+  --muted:     #7a7a88;
+  --muted2:    #4a4a58;
+  --red:       #ff4d4d;
+  --font-disp: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,12,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 52px;
+}
+
+.nav-logo {
+  font-family: var(--font-disp);
+  font-size: 22px;
+  letter-spacing: .04em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.nav-logo span { color: var(--text); }
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  flex: 1;
+}
+.nav-links a {
+  display: block;
+  padding: 0 14px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: .03em;
+  transition: color .15s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--accent); }
+
+.nav-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 0 12px;
+  height: 34px;
+  cursor: text;
+  flex-shrink: 0;
+}
+.nav-search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  width: 180px;
+}
+.nav-search input::placeholder { color: var(--muted2); }
+.nav-search svg { color: var(--muted); flex-shrink: 0; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  padding: 72px 2rem 64px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(232,255,71,0.045) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(71,197,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 80px),
+    repeating-linear-gradient(0deg,  rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 80px);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero h1 {
+  font-family: var(--font-disp);
+  font-size: clamp(52px, 8vw, 88px);
+  line-height: .95;
+  letter-spacing: .02em;
+  margin-bottom: 20px;
+}
+.hero h1 .outline {
+  -webkit-text-stroke: 1.5px var(--text);
+  color: transparent;
+}
+.hero h1 .accent { color: var(--accent); }
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 520px;
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-stat-val {
+  font-family: var(--font-disp);
+  font-size: 28px;
+  letter-spacing: .04em;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.hero-stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* ── LAYOUT ── */
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section { padding: 52px 0; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.section-title {
+  font-family: var(--font-disp);
+  font-size: 28px;
+  letter-spacing: .04em;
+}
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.view-all {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  letter-spacing: .06em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color .15s;
+  white-space: nowrap;
+}
+.view-all:hover { color: var(--accent); }
+
+/* ── HOT GUIDES ── */
+.hot-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+
+.guide-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .2s, transform .2s;
+  cursor: pointer;
+}
+.guide-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+
+.card-img {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-disp);
+  font-size: 56px;
+  letter-spacing: .04em;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.card-img.barn    { background: linear-gradient(135deg, #1a140a 0%, #2a1f0e 100%); color: #c4922a; }
+.card-img.treasure{ background: linear-gradient(135deg, #0a1220 0%, #0f1e30 100%); color: #3a8fe0; }
+.card-img.tierlist{ background: linear-gradient(135deg, #150a0a 0%, #281010 100%); color: #cc3333; }
+.card-img.tuning  { background: linear-gradient(135deg, #0a110a 0%, #101e10 100%); color: #3a9e3a; }
+.card-img.wrist   { background: linear-gradient(135deg, #10080f 0%, #1e0f1c 100%); color: #9944cc; }
+.card-img.legend  { background: linear-gradient(135deg, #0d0d00 0%, #1c1c00 100%); color: #cccc00; }
+
+.card-img-sub {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: .08em;
+}
+
+.guide-card.featured .card-img { height: 220px; font-size: 80px; }
+
+.card-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+.tag-collectible { color: #BA7517; border-color: rgba(186,117,23,0.3); background: rgba(186,117,23,0.08); }
+.tag-cars        { color: var(--accent3); border-color: rgba(71,197,255,0.3); background: rgba(71,197,255,0.08); }
+.tag-progression { color: #9f7fe8; border-color: rgba(159,127,232,0.3); background: rgba(159,127,232,0.08); }
+.tag-advanced    { color: var(--accent2); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.08); }
+.tag-hot { color: var(--red); border-color: rgba(255,77,77,0.3); background: rgba(255,77,77,0.08); }
+.tag-endgame { color: var(--accent); border-color: rgba(232,255,71,0.3); background: rgba(232,255,71,0.08); }
+
+.card-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text);
+}
+.guide-card.featured .card-title { font-size: 18px; }
+
+.card-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .04em;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ── SECTION GRID ── */
+.sections-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.section-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 16px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  position: relative;
+  overflow: hidden;
+}
+.section-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.section-card.s-green::before  { background: #1D9E75; }
+.section-card.s-blue::before   { background: var(--accent3); }
+.section-card.s-amber::before  { background: #BA7517; }
+.section-card.s-purple::before { background: #7F77DD; }
+.section-card.s-coral::before  { background: var(--accent2); }
+
+.section-card:hover { background: var(--bg3); border-color: var(--border2); }
+
+.sc-icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.s-green  .sc-icon { color: #1D9E75; }
+.s-blue   .sc-icon { color: var(--accent3); }
+.s-amber  .sc-icon { color: #BA7517; }
+.s-purple .sc-icon { color: #7F77DD; }
+.s-coral  .sc-icon { color: var(--accent2); }
+
+.sc-title {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.sc-pages {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sc-pages li {
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sc-pages li::before {
+  content: '—';
+  font-size: 10px;
+  opacity: .4;
+}
+
+/* ── PROGRESSION EXPLAINER ── */
+.progression-wrap {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 28px 24px;
+}
+
+.prog-title {
+  font-family: var(--font-disp);
+  font-size: 22px;
+  letter-spacing: .04em;
+  margin-bottom: 6px;
+}
+.prog-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+}
+
+.prog-tracks {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  gap: 0;
+}
+.prog-divider {
+  background: var(--border);
+  margin: 0 24px;
+}
+
+.prog-track { padding: 0 4px; }
+.pt-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pt-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.pt-dot.wrist  { background: #7F77DD; }
+.pt-dot.stamp  { background: #BA7517; }
+.pt-dot.play   { background: var(--accent3); }
+
+.prog-steps { display: flex; flex-direction: column; gap: 0; position: relative; }
+.prog-steps::before {
+  content: '';
+  position: absolute;
+  left: 11px; top: 12px; bottom: 12px;
+  width: 1px;
+  background: var(--border2);
+}
+
+.ps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  position: relative;
+}
+.ps-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--muted2);
+  background: var(--bg2);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.ps.done .ps-dot { background: #7F77DD; border-color: #7F77DD; }
+.ps.done-a .ps-dot { background: #BA7517; border-color: #BA7517; }
+.ps.done-b .ps-dot { background: var(--accent3); border-color: var(--accent3); }
+.ps.special .ps-dot { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 8px rgba(232,255,71,.4); }
+.ps-text { font-size: 12px; color: var(--muted); line-height: 1.3; }
+.ps.special .ps-text { color: var(--accent); font-weight: 500; }
+
+.prog-unlock {
+  margin-top: 16px;
+  padding: 10px 12px;
+  background: rgba(232,255,71,.05);
+  border: 1px solid rgba(232,255,71,.15);
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── WEEKLY ── */
+.weekly-banner {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.weekly-badge {
+  background: rgba(232,255,71,0.08);
+  border: 1px solid rgba(232,255,71,0.2);
+  border-radius: 8px;
+  padding: 14px 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.weekly-badge-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--accent);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.weekly-badge-val {
+  font-family: var(--font-disp);
+  font-size: 28px;
+  color: var(--accent);
+  letter-spacing: .04em;
+  line-height: 1;
+}
+.weekly-content { flex: 1; }
+.weekly-title { font-weight: 500; font-size: 15px; margin-bottom: 6px; }
+.weekly-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.weekly-tasks {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.wtask {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+}
+.wtask.done { color: #1D9E75; border-color: rgba(29,158,117,0.3); background: rgba(29,158,117,0.08); }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-logo {
+  font-family: var(--font-disp);
+  font-size: 18px;
+  letter-spacing: .04em;
+  color: var(--accent);
+}
+.footer-logo span { color: var(--muted); }
+.footer-note {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted2);
+  letter-spacing: .06em;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.footer-links a {
+  font-size: 12px;
+  color: var(--muted);
+  transition: color .15s;
+}
+.footer-links a:hover { color: var(--text); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: fadeUp .5s ease both; }
+.hero h1      { animation: fadeUp .5s .1s ease both; }
+.hero-sub     { animation: fadeUp .5s .2s ease both; }
+.hero-stats   { animation: fadeUp .5s .3s ease both; }
+
+/* scrolling ticker */
+.ticker-wrap {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  overflow: hidden;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.ticker-inner {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .06em;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ticker-item::after {
+  content: '//';
+  color: var(--muted2);
+}
+.ticker-item .hi { color: var(--accent); }
+
+/* ── SVG ICONS (inline) ── */
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">FH6<span>Guide</span></div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Getting Started</a></li>
+    <li><a href="#">Cars & Garage</a></li>
+    <li><a href="#">Collectibles</a></li>
+    <li><a href="#">Progression</a></li>
+    <li><a href="#">Advanced</a></li>
+  </ul>
+  <div class="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="hi">NEW</span> Forza Horizon 6 launched May 19, 2026</span>
+    <span class="ticker-item">15 Barn Finds hidden across Japan</span>
+    <span class="ticker-item">9 Treasure Cars — one per region</span>
+    <span class="ticker-item"><span class="hi">HOT</span> Wristband guide — unlock Legend Island</span>
+    <span class="ticker-item">270K+ Steam peak players at launch</span>
+    <span class="ticker-item">Festival Playlist resets every Thursday</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Forza Horizon 6 launched May 19, 2026</span>
+    <span class="ticker-item">15 Barn Finds hidden across Japan</span>
+    <span class="ticker-item">9 Treasure Cars — one per region</span>
+    <span class="ticker-item"><span class="hi">HOT</span> Wristband guide — unlock Legend Island</span>
+    <span class="ticker-item">270K+ Steam peak players at launch</span>
+    <span class="ticker-item">Festival Playlist resets every Thursday</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Forza Horizon 6 — Japan · 2026</div>
+    <h1>Every<br><span class="outline">guide</span> you<br>need to <span class="accent">win.</span></h1>
+    <p class="hero-sub">Barn Finds, Treasure Cars, Car Tier Lists, Tuning Codes, Wristband progression and more — all in one place, updated daily.</p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-val">27</div>
+        <div class="hero-stat-lbl">Guide pages</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">15</div>
+        <div class="hero-stat-lbl">Barn Finds</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">9</div>
+        <div class="hero-stat-lbl">Treasure Cars</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">550+</div>
+        <div class="hero-stat-lbl">Cars in game</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+<!-- HOT GUIDES -->
+<div class="page-wrap">
+<section>
+  <div class="section-header">
+    <div>
+      <div class="section-label">Most searched right now</div>
+      <div class="section-title">Hot guides</div>
+    </div>
+    <a href="#" class="view-all">View all guides →</a>
+  </div>
+
+  <div class="hot-grid">
+
+    <!-- featured -->
+    <div class="guide-card featured" style="grid-row: 1 / 3;">
+      <div class="card-img barn">
+        BARN
+        <div class="card-img-sub">COLLECTIBLES</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag tag-collectible">Collectibles</span>
+          <span class="tag tag-hot">Hot</span>
+        </div>
+        <div class="card-title">All 15 Barn Find locations in Forza Horizon 6 — complete map guide</div>
+        <p style="font-size:12px; color:var(--muted); line-height:1.55; margin-top:4px;">Barn Finds are unlocked progressively via your Discover Japan Stamp level — you can't just drive there. We show every location and the stamp tier needed to trigger each rumor.</p>
+        <div class="card-meta">
+          <span>Updated May 20, 2026</span>
+          <span>~8 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-card">
+      <div class="card-img treasure" style="height:130px; font-size:40px;">
+        TREASURE
+        <div class="card-img-sub">COLLECTIBLES</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag tag-collectible">Collectibles</span>
+          <span class="tag tag-hot">Hot</span>
+        </div>
+        <div class="card-title">All 9 Treasure Car locations — one per region, no prereqs</div>
+        <div class="card-meta">
+          <span>Updated May 21, 2026</span>
+          <span>~5 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-card">
+      <div class="card-img tierlist" style="height:130px; font-size:40px;">
+        S-TIER
+        <div class="card-img-sub">CARS</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag tag-cars">Cars</span>
+          <span class="tag tag-hot">Hot</span>
+        </div>
+        <div class="card-title">FH6 car tier list — best cars by class (S1, S2, X, R)</div>
+        <div class="card-meta">
+          <span>Updated May 21, 2026</span>
+          <span>~6 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-card">
+      <div class="card-img wrist" style="height:110px; font-size:36px;">
+        GOLD
+        <div class="card-img-sub">PROGRESSION</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag tag-progression">Progression</span>
+          <span class="tag tag-endgame">Endgame</span>
+        </div>
+        <div class="card-title">Wristband guide — all 7 tiers & how to reach Legend Island</div>
+        <div class="card-meta">
+          <span>May 20, 2026</span>
+          <span>~7 min</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-card">
+      <div class="card-img tuning" style="height:110px; font-size:36px;">
+        TUNE
+        <div class="card-img-sub">ADVANCED</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag tag-advanced">Advanced</span>
+          <span class="tag tag-hot">Hot</span>
+        </div>
+        <div class="card-title">FH6 tuning guide — every setting explained for beginners</div>
+        <div class="card-meta">
+          <span>May 19, 2026</span>
+          <span>~10 min</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- SECTIONS -->
+<div style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<div class="page-wrap">
+<section style="padding: 36px 0;">
+  <div class="section-header">
+    <div class="section-title">Browse by topic</div>
+  </div>
+  <div class="sections-row">
+
+    <div class="section-card s-green">
+      <div class="sc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l9-9 9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9"/></svg>
+      </div>
+      <div class="sc-title">Getting Started</div>
+      <ul class="sc-pages">
+        <li>Beginner's guide</li>
+        <li>Best starter car</li>
+        <li>Fast travel</li>
+        <li>Player houses</li>
+        <li>Credits farming</li>
+      </ul>
+    </div>
+
+    <div class="section-card s-blue">
+      <div class="sc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M9 21h10a2 2 0 002-2v-7a2 2 0 00-2-2H9a2 2 0 00-2 2v7a2 2 0 002 2z"/></svg>
+      </div>
+      <div class="sc-title">Cars & Garage</div>
+      <ul class="sc-pages">
+        <li>Full car list</li>
+        <li>Car tier list</li>
+        <li>Best cars by class</li>
+        <li>Auction house tips</li>
+        <li>Pre-owned cars</li>
+      </ul>
+    </div>
+
+    <div class="section-card s-amber">
+      <div class="sc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+      </div>
+      <div class="sc-title">Collectibles & Map</div>
+      <ul class="sc-pages">
+        <li>All 15 Barn Finds</li>
+        <li>All 9 Treasure Cars</li>
+        <li>Japan map guide</li>
+        <li>XP boards</li>
+        <li>Photo challenges</li>
+      </ul>
+    </div>
+
+    <div class="section-card s-purple">
+      <div class="sc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      </div>
+      <div class="sc-title">Progression</div>
+      <ul class="sc-pages">
+        <li>Wristband system</li>
+        <li>Legend Island unlock</li>
+        <li>XP farming</li>
+        <li>Festival Playlist</li>
+        <li>Achievements</li>
+      </ul>
+    </div>
+
+    <div class="section-card s-coral">
+      <div class="sc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2m15.66 5.66l-1.41-1.41M4.34 19.07l1.41-1.41"/></svg>
+      </div>
+      <div class="sc-title">Advanced & Setup</div>
+      <ul class="sc-pages">
+        <li>Tuning guide</li>
+        <li>Tune share codes</li>
+        <li>Best PC settings</li>
+        <li>Drift guide</li>
+        <li>Controller & wheel</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+</div>
+</div>
+
+<!-- PROGRESSION EXPLAINER -->
+<div class="page-wrap">
+<section>
+  <div class="section-header">
+    <div>
+      <div class="section-label">How FH6 progression works</div>
+      <div class="section-title">Three tracks, one goal</div>
+    </div>
+    <a href="#" class="view-all">Full progression guide →</a>
+  </div>
+
+  <div class="progression-wrap">
+    <div class="prog-title">Understanding Wristbands, Stamps & Horizon Play</div>
+    <div class="prog-sub">// FH6 runs three parallel progression systems simultaneously</div>
+
+    <div class="prog-tracks">
+
+      <div class="prog-track">
+        <div class="pt-label">
+          <div class="pt-dot wrist"></div>
+          Wristbands — Horizon Festival
+        </div>
+        <div class="prog-steps">
+          <div class="ps done"><div class="ps-dot"></div><div class="ps-text">Yellow — qualify at the Invitational</div></div>
+          <div class="ps done"><div class="ps-dot"></div><div class="ps-text">Green — complete road & dirt events</div></div>
+          <div class="ps done"><div class="ps-dot"></div><div class="ps-text">Blue, Pink, Orange — race progression</div></div>
+          <div class="ps done"><div class="ps-dot"></div><div class="ps-text">Purple — 32,500 Festival Points needed</div></div>
+          <div class="ps special"><div class="ps-dot"></div><div class="ps-text">Gold — become Horizon Legend</div></div>
+        </div>
+        <div class="prog-unlock">⚑ Unlocks Legend Island</div>
+      </div>
+
+      <div class="prog-divider"></div>
+
+      <div class="prog-track" style="padding: 0 4px 0 28px;">
+        <div class="pt-label">
+          <div class="pt-dot stamp"></div>
+          Stamps — Discover Japan
+        </div>
+        <div class="prog-steps">
+          <div class="ps done-a"><div class="ps-dot"></div><div class="ps-text">Explore regions, smash mascots</div></div>
+          <div class="ps done-a"><div class="ps-dot"></div><div class="ps-text">Street & Touge races, food deliveries</div></div>
+          <div class="ps done-a"><div class="ps-dot"></div><div class="ps-text">7 stamp levels (Yellow → Gold)</div></div>
+          <div class="ps done-a"><div class="ps-dot"></div><div class="ps-text">Each level unlocks new Barn Find rumors</div></div>
+          <div class="ps special"><div class="ps-dot"></div><div class="ps-text">Gold stamp = Master Explorer</div></div>
+        </div>
+        <div class="prog-unlock" style="border-color: rgba(186,117,23,.3); background: rgba(186,117,23,.05); color: #BA7517;">⚑ Unlocks all 15 Barn Finds</div>
+      </div>
+
+      <div class="prog-divider"></div>
+
+      <div class="prog-track" style="padding: 0 4px 0 28px;">
+        <div class="pt-label">
+          <div class="pt-dot play"></div>
+          Horizon Play — Multiplayer
+        </div>
+        <div class="prog-steps">
+          <div class="ps done-b"><div class="ps-dot"></div><div class="ps-text">Spec Racing online events</div></div>
+          <div class="ps done-b"><div class="ps-dot"></div><div class="ps-text">Touge Showdown (1v1 mountain duel)</div></div>
+          <div class="ps done-b"><div class="ps-dot"></div><div class="ps-text">Eliminator, Hide & Seek, Custom Racing</div></div>
+          <div class="ps done-b"><div class="ps-dot"></div><div class="ps-text">XP feeds its own Horizon Play rank</div></div>
+          <div class="ps special"><div class="ps-dot"></div><div class="ps-text">Fully separate from campaign</div></div>
+        </div>
+        <div class="prog-unlock" style="border-color: rgba(71,197,255,.3); background: rgba(71,197,255,.05); color: var(--accent3);">⚑ Independent multiplayer progression</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- FESTIVAL PLAYLIST -->
+<div style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<div class="page-wrap">
+<section style="padding: 36px 0;">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Resets every Thursday</div>
+      <div class="section-title">Festival Playlist — this week</div>
+    </div>
+    <a href="#" class="view-all">Full playlist guide →</a>
+  </div>
+  <div class="weekly-banner">
+    <div class="weekly-badge">
+      <div class="weekly-badge-label">Week</div>
+      <div class="weekly-badge-val">01</div>
+    </div>
+    <div class="weekly-content">
+      <div class="weekly-title">Season 1 — Spring · May 19 – May 26, 2026</div>
+      <div class="weekly-desc">Complete weekly challenges and championships to earn Playlist Points. Reach 20pts and 40pts milestones to unlock the exclusive season cars — these are time-limited and cannot be bought in the Autoshow.</div>
+      <div class="weekly-tasks">
+        <span class="wtask done">✓ PR Stunt — Speed Trap</span>
+        <span class="wtask done">✓ Seasonal Championship</span>
+        <span class="wtask">Trial — Co-op Race</span>
+        <span class="wtask">Playground Games</span>
+        <span class="wtask">Photo Challenge</span>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">FH6<span>Guide</span></div>
+    <div class="footer-note" style="margin-top:6px;">Fan-made guide site · Not affiliated with Playground Games or Xbox Game Studios</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Submit a guide</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
