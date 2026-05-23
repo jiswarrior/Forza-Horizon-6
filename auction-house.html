@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Auction House Guide — How to Buy, Sell & Flip Cars [2026] | FH6Guide</title>
+<meta name="description" content="Complete FH6 Auction House guide. How to unlock it, buy and sell cars, flip for profit, snipe underpriced listings, auction house rules, fees explained, and best cars to sell.">
+<link rel="canonical" href="https://www.fh6guide.org/auction-house.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0c;--bg2:#111116;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#e8ff47;--accent2:#ff6b35;--accent3:#47c5ff;--text:#f0efe8;--muted:#7a7a88;--muted2:#4a4a58;--green:#1D9E75;--amber:#BA7517;--red:#ff4d4d;--font-disp:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);transition:color .15s;white-space:nowrap}.nav-links a:hover{color:var(--text)}.nav-links a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;flex-shrink:0}.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:160px}.nav-search input::placeholder{color:var(--muted2)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0;background:none;border:none}.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}.nav-drawer.open{display:flex}.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}.nav-drawer a:hover,.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}.nav-drawer-search input::placeholder{color:var(--muted2)}
+.page-wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+.breadcrumb{padding:14px 0;font-size:12px;color:var(--muted);font-family:var(--font-mono);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}.breadcrumb a{color:var(--muted);transition:color .15s}.breadcrumb a:hover{color:var(--text)}
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+.article-header{padding:0 0 28px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.article-tags{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid}
+.tag-cars{color:var(--accent3);border-color:rgba(71,197,255,.3);background:rgba(71,197,255,.08)}
+.tag-cr{color:var(--accent);border-color:rgba(232,255,71,.3);background:rgba(232,255,71,.08)}
+.tag-hot{color:var(--red);border-color:rgba(255,77,77,.3);background:rgba(255,77,77,.08)}
+.article-title{font-family:var(--font-disp);font-size:clamp(32px,5vw,52px);line-height:.95;letter-spacing:.02em;margin-bottom:16px}
+.article-meta{font-family:var(--font-mono);font-size:11px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap}
+.prose h2{font-family:var(--font-disp);font-size:28px;letter-spacing:.03em;margin:36px 0 14px}.prose h3{font-size:15px;font-weight:500;margin:20px 0 8px}
+.prose p{color:#c8c7c0;margin-bottom:14px;line-height:1.75}.prose ul,.prose ol{color:#c8c7c0;margin:0 0 14px 20px;line-height:1.75}.prose li{margin-bottom:6px}.prose strong{color:var(--text);font-weight:500}
+.callout{border-radius:8px;padding:13px 16px;margin:18px 0;border-left:3px solid;font-size:14px;line-height:1.6}
+.callout-tip{background:rgba(29,158,117,.08);border-color:var(--green);color:#a5d9c7}
+.callout-warn{background:rgba(186,117,23,.08);border-color:var(--amber);color:#d4a96a}
+.callout-info{background:rgba(71,197,255,.08);border-color:var(--accent3);color:#9addf5}
+.callout-title{font-weight:500;color:var(--text);margin-bottom:4px;font-size:11px;letter-spacing:.06em;font-family:var(--font-mono);text-transform:uppercase}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px}
+.stat-val{font-family:var(--font-disp);font-size:28px;letter-spacing:.04em;color:var(--accent);line-height:1}
+.stat-lbl{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.steps{display:flex;flex-direction:column;margin:18px 0}
+.step{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid var(--border)}.step:last-child{border-bottom:none}
+.step-num{font-family:var(--font-disp);font-size:26px;color:var(--accent);opacity:.3;line-height:1;flex-shrink:0;width:30px}
+.step-body{flex:1}.step-title{font-weight:500;font-size:14px;color:var(--text);margin-bottom:3px}.step-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.rule-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.rule-title{font-size:13px;font-weight:500;margin-bottom:4px}
+.rule-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.rule-ok{border-left:2px solid var(--green)}.rule-ok .rule-title{color:var(--green)}
+.rule-no{border-left:2px solid var(--red)}.rule-no .rule-title{color:var(--red)}
+.guide-table{width:100%;border-collapse:collapse;font-size:13px;margin:16px 0}
+.guide-table th{text-align:left;padding:8px 12px;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border2);font-weight:400}
+.guide-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:#c8c7c0;vertical-align:top}
+.guide-table tr:last-child td{border-bottom:none}.guide-table tr:hover td{background:var(--bg2)}
+.sidebar{display:flex;flex-direction:column;gap:14px}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sidebar-card-title{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.sidebar-links{list-style:none;display:flex;flex-direction:column;gap:2px}
+.sidebar-links a{font-size:13px;color:var(--muted);padding:5px 8px;border-radius:5px;display:block;transition:background .15s,color .15s}
+.sidebar-links a:hover{background:var(--bg3);color:var(--text)}.sidebar-links a.current{color:var(--accent);background:rgba(232,255,71,.06)}
+footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2)}
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}.nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}.content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}.stat-row{grid-template-columns:1fr 1fr}
+  .rules-grid{grid-template-columns:1fr}.prose h2{font-size:22px}
+  .guide-table th:nth-child(3),.guide-table td:nth-child(3){display:none}
+}
+@media(max-width:480px){.stat-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html" class="active">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html">Advanced</a></li>
+  </ul>
+  <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html" class="active">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html">Advanced</a>
+  <div class="nav-drawer-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+</div>
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span style="color:var(--muted2)">/</span><a href="car-tier-list.html">Cars &amp; Garage</a><span style="color:var(--muted2)">/</span>Auction House</div>
+  <div class="content-wrap">
+    <main>
+      <div class="article-header">
+        <div class="article-tags"><span class="tag tag-cars">Cars</span><span class="tag tag-cr">Credits</span><span class="tag tag-hot">Hot</span></div>
+        <h1 class="article-title">FH6 Auction House Guide — Buy, Sell & Flip Cars</h1>
+        <div class="article-meta"><span>Updated May 22, 2026</span><span>~8 min read</span><span>15% seller fee</span></div>
+      </div>
+      <div class="prose">
+        <div class="stat-row">
+          <div class="stat-card"><div class="stat-val">15%</div><div class="stat-lbl">Seller fee deducted</div></div>
+          <div class="stat-card"><div class="stat-val">60</div><div class="stat-lbl">Days to collect credits</div></div>
+          <div class="stat-card"><div class="stat-val">24h</div><div class="stat-lbl">Max auction duration</div></div>
+        </div>
+        <p>The Auction House is the <strong>only way to trade cars between players</strong> in FH6. It's how you offload duplicates, track down Wheelspin-exclusive cars you missed, and flip Festival Playlist rewards for profit. Many players ignore it for the first few hours and miss out on what can become a major Credits source. This guide covers everything from basics to advanced flipping strategy.</p>
+        <div class="callout callout-warn">
+          <div class="callout-title">Unlock requirement</div>
+          The Auction House unlocks <strong>after completing the Horizon Invitational</strong> — your first Wristband event. You cannot access it before that point. Once unlocked, access it from any Player House or Festival Site via Buy &amp; Sell → Auction House.
+        </div>
+        <h2>How to access the Auction House</h2>
+        <p>You must be at a Player House or Festival Site to use it. From the main pause menu: <strong>Buy &amp; Sell → Auction House</strong>. You cannot access it while driving in the open world.</p>
+        <h2>Buying a car — step by step</h2>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Search Auction</div><div class="step-desc">Filter by car name, manufacturer, class, or PI rating. Always search multiple listings of the same car before buying — prices vary widely. Compare at least 5 listings before committing.</div></div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Bid or Buyout</div><div class="step-desc">Bidding is cheaper but takes time and risks being outbid at the last second. Buyout pays the listed price immediately and guarantees the car. For rare cars, buyout is usually worth it. For common cars, bid low and walk away.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Check Car Mastery before buying</div><div class="step-desc">Some cars have Car Mastery trees that pay out 200,000+ CR in perks. If the auction buyout is less than the perk value, the car is effectively free or profitable to buy, strip the perks, then resell.</div></div></div>
+        </div>
+        <h2>Selling a car — step by step</h2>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Start Auction → choose car</div><div class="step-desc">Select Start Auction. Your garage inventory appears. Not all cars can be listed — Barn Finds, Treasure Cars, and Loyalty Reward cars cannot be sold. The game greys out ineligible cars.</div></div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Set Starting Price and Buyout Price</div><div class="step-desc">Search the same car on the Auction House first — look at current listings. For common cars, match or slightly undercut the lowest listing. For rare cars, check recent sold prices and price accordingly. The Starting Price is the minimum bid; Buyout ends the auction immediately.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Set auction duration (1–24 hours)</div><div class="step-desc">1-hour auctions are good for common cars in high demand. 24-hour auctions suit rare cars where you're waiting for the right buyer. Short auctions create urgency; long auctions maximise visibility.</div></div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">Collect credits manually within 60 days</div><div class="step-desc">After a sale, go to Auction House → My Auctions to collect your credits. They do NOT automatically transfer. <strong>Uncollected credits expire after 60 days</strong> — you will lose them permanently.</div></div></div>
+        </div>
+        <div class="callout callout-warn">
+          <div class="callout-title">The 15% seller fee</div>
+          FH6 deducts a <strong>15% fee</strong> from every sale. A car that sells for 1,000,000 CR nets you 850,000 CR. Factor this into your pricing — if you bought a car for 500,000 CR and want to break even, list the buyout at approximately 590,000 CR.
+        </div>
+        <h2>What you can and cannot sell</h2>
+        <div class="rules-grid">
+          <div class="rule-card rule-ok"><div class="rule-title">✓ Can sell</div><div class="rule-desc">Autoshow cars · Wheelspin duplicates · DLC cars (DLC buyers only) · Festival Playlist reward cars · Most standard garage cars</div></div>
+          <div class="rule-card rule-no"><div class="rule-title">✗ Cannot sell</div><div class="rule-desc">Barn Find cars · Treasure Cars · Loyalty Reward cars · Forza Edition cars (most) · Cars marked as Collection Journal exclusives</div></div>
+        </div>
+        <h2>Flipping for profit</h2>
+        <p>Car flipping — buying underpriced listings and reselling at market value — is the highest-ceiling Credits strategy in the game. It requires market knowledge but no grinding. The most profitable flips come from:</p>
+        <ul>
+          <li><strong>Wheelspin-exclusive cars listed cheaply</strong> — players who don't know a car is rare will underlist it. Search regularly and buy at under-market prices.</li>
+          <li><strong>Festival Playlist reward cars after the season ends</strong> — cars that were free during a season become Auction House-only. Prices spike when the season rotates out.</li>
+          <li><strong>Forza Edition (FE) cars</strong> — these have enhanced perk trees that pay massive Credits. The Nissan GT-R Black Edition FE regularly sells at maximum buyout price.</li>
+          <li><strong>Cars with high Car Mastery payouts</strong> — if a car's mastery tree pays 200,000+ CR in perks, buying it cheaply, claiming the perks, and reselling at a profit is entirely viable.</li>
+        </ul>
+        <div class="callout callout-tip">
+          <div class="callout-title">Sniping — buy before anyone else does</div>
+          Sniping is searching for underpriced listings the moment they appear and buying them before other players. It requires speed, market knowledge, and patience. On popular cars you're competing with hundreds of other snipers — success rate is roughly 1 in 10 attempts. Filter by specific cars, set max buyout to slightly below market price, and refresh frequently during peak hours.
+        </div>
+        <h2>Auction House rules at a glance</h2>
+        <table class="guide-table">
+          <thead><tr><th>Rule</th><th>Detail</th></tr></thead>
+          <tbody>
+            <tr><td style="color:var(--text);font-weight:500">Seller fee</td><td>15% of final sale price deducted automatically</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Credit collection deadline</td><td>60 days — uncollected credits are permanently lost</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Auction duration</td><td>1 hour to 24 hours — your choice when listing</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Unsold cars</td><td>Return to your garage automatically — no penalty</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">DLC cars</td><td>Buyable only by players who own the same DLC pack</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">No quick-sell option</td><td>There is no "sell to game" button. Auction House is the only way to get Credits from a car</td></tr>
+            <tr><td style="color:var(--text);font-weight:500">Gift Drop / Delete</td><td>Give a car to a player or delete it — both give zero Credits in return</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Cars & Garage guides</div>
+        <ul class="sidebar-links">
+          <li><a href="car-tier-list.html">Car tier list</a></li>
+          <li><a href="car-list.html">Full car list (618)</a></li>
+          <li><a href="auction-house.html" class="current">Auction House guide</a></li>
+          <li><a href="xp-credits-farming.html">Credits farming</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Quick rules</div>
+        <div style="font-size:12px;display:flex;flex-direction:column;gap:5px;color:var(--muted)">
+          <div style="padding:4px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--red)">15%</strong> fee on every sale</div>
+          <div style="padding:4px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--amber)">60 days</strong> to collect credits</div>
+          <div style="padding:4px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--red)">Cannot sell:</strong> Barn Finds, Treasure Cars, Loyalty Rewards</div>
+          <div style="padding:4px 0">Access: any Player House or Festival Site</div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Related guides</div>
+        <ul class="sidebar-links">
+          <li><a href="xp-credits-farming.html">Credits farming</a></li>
+          <li><a href="player-houses.html">Player houses</a></li>
+          <li><a href="car-tier-list.html">Car tier list</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer>
+  <div><div class="footer-logo">FH6<span>Guide</span></div><div class="footer-note" style="margin-top:5px">Fan-made guide · Not affiliated with Playground Games or Xbox</div></div>
+  <div class="footer-note">© 2026 FH6Guide · fh6guide.org</div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))d.classList.remove('open')});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})});
+</script>
+</body></html>

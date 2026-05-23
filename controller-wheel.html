@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Best Controller & Wheel Settings [2026] | FH6Guide</title>
+<meta name="description" content="Best FH6 controller and racing wheel settings. Deadzone, steering sensitivity, linearity explained. Wheel force feedback setup for Fanatec, Logitech, MOZA, Thrustmaster.">
+<link rel="canonical" href="https://www.fh6guide.org/controller-wheel.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0c;--bg2:#111116;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#e8ff47;--accent2:#ff6b35;--accent3:#47c5ff;--text:#f0efe8;--muted:#7a7a88;--muted2:#4a4a58;--green:#1D9E75;--amber:#BA7517;--red:#ff4d4d;--font-disp:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);transition:color .15s;white-space:nowrap}.nav-links a:hover{color:var(--text)}.nav-links a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;flex-shrink:0}.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:160px}.nav-search input::placeholder{color:var(--muted2)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0;background:none;border:none}.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}.nav-drawer.open{display:flex}.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}.nav-drawer a:hover,.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}.nav-drawer-search input::placeholder{color:var(--muted2)}
+.page-wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+.breadcrumb{padding:14px 0;font-size:12px;color:var(--muted);font-family:var(--font-mono);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}.breadcrumb a{color:var(--muted);transition:color .15s}.breadcrumb a:hover{color:var(--text)}
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+.article-header{padding:0 0 28px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.article-tags{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid}
+.tag-adv{color:var(--accent2);border-color:rgba(255,107,53,.3);background:rgba(255,107,53,.08)}
+.tag-pc{color:var(--accent3);border-color:rgba(71,197,255,.3);background:rgba(71,197,255,.08)}
+.article-title{font-family:var(--font-disp);font-size:clamp(32px,5vw,52px);line-height:.95;letter-spacing:.02em;margin-bottom:16px}
+.article-meta{font-family:var(--font-mono);font-size:11px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap}
+.prose h2{font-family:var(--font-disp);font-size:28px;letter-spacing:.03em;margin:36px 0 14px}.prose h3{font-size:15px;font-weight:500;margin:20px 0 8px}
+.prose p{color:#c8c7c0;margin-bottom:14px;line-height:1.75}.prose ul{color:#c8c7c0;margin:0 0 14px 20px;line-height:1.75}.prose li{margin-bottom:6px}.prose strong{color:var(--text);font-weight:500}
+.callout{border-radius:8px;padding:13px 16px;margin:18px 0;border-left:3px solid;font-size:14px;line-height:1.6}
+.callout-tip{background:rgba(29,158,117,.08);border-color:var(--green);color:#a5d9c7}
+.callout-warn{background:rgba(186,117,23,.08);border-color:var(--amber);color:#d4a96a}
+.callout-info{background:rgba(71,197,255,.08);border-color:var(--accent3);color:#9addf5}
+.callout-title{font-weight:500;color:var(--text);margin-bottom:4px;font-size:11px;letter-spacing:.06em;font-family:var(--font-mono);text-transform:uppercase}
+.settings-block{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;margin:16px 0}
+.sb-title{font-family:var(--font-disp);font-size:20px;letter-spacing:.04em;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.setting-row{display:grid;grid-template-columns:180px 80px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);align-items:start}
+.setting-row:last-child{border-bottom:none}
+.s-name{font-size:13px;font-weight:500;color:var(--text)}
+.s-val{font-family:var(--font-mono);font-size:12px;color:var(--accent);text-align:center;padding:2px 6px;background:rgba(232,255,71,.08);border:1px solid rgba(232,255,71,.2);border-radius:4px;white-space:nowrap}
+.s-why{font-size:12px;color:var(--muted);line-height:1.5}
+.diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.diag-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.dc-symptom{font-size:13px;font-weight:500;color:var(--red);margin-bottom:5px}
+.dc-fix{font-size:12px;color:var(--muted);line-height:1.5}
+.sidebar{display:flex;flex-direction:column;gap:14px}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sidebar-card-title{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.sidebar-links{list-style:none;display:flex;flex-direction:column;gap:2px}
+.sidebar-links a{font-size:13px;color:var(--muted);padding:5px 8px;border-radius:5px;display:block;transition:background .15s,color .15s}
+.sidebar-links a:hover{background:var(--bg3);color:var(--text)}.sidebar-links a.current{color:var(--accent);background:rgba(232,255,71,.06)}
+footer{border-top:1px solid var(--border);padding:28px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2)}
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}.nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}.content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}.prose h2{font-size:22px}
+  .setting-row{grid-template-columns:1fr 60px;gap:8px}
+  .s-why{display:none}
+  .diag-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .setting-row{grid-template-columns:1fr 56px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html" class="active">Advanced</a></li>
+  </ul>
+  <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html" class="active">Advanced</a>
+  <div class="nav-drawer-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Search guides…"></div>
+</div>
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span style="color:var(--muted2)">/</span><a href="tuning-guide.html">Advanced</a><span style="color:var(--muted2)">/</span>Controller &amp; Wheel</div>
+  <div class="content-wrap">
+    <main>
+      <div class="article-header">
+        <div class="article-tags"><span class="tag tag-adv">Advanced</span><span class="tag tag-pc">Xbox · PC · PS5</span></div>
+        <h1 class="article-title">FH6 Best Controller & Wheel Settings</h1>
+        <div class="article-meta"><span>Updated May 22, 2026</span><span>Controller + Wheel covered</span><span>All platforms</span></div>
+      </div>
+      <div class="prose">
+        <p>FH6's default control settings are deliberately beginner-friendly — high deadzones, lots of steering assistance, and soft input curves. These are fine for the first few hours but limit precision as you progress to harder events, tuned cars, and online play. This guide covers the settings that make the biggest difference for both controller and wheel users.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">FH6 supports up to 5 custom control profiles</div>
+          You can save separate profiles for Road Racing, Drift, and Off-Road. Create separate profiles rather than constantly adjusting settings between events.
+        </div>
+
+        <h2>Recommended controller settings</h2>
+        <p>These settings work for Xbox controller, PS5 DualSense, and most third-party controllers. The goal: remove artificial lag from deadzones and get direct, responsive inputs without twitchiness.</p>
+
+        <div class="settings-block">
+          <div class="sb-title">Controller — Recommended Values</div>
+          <div class="setting-row"><div class="s-name">Steering Deadzone Inside</div><div class="s-val">0–5</div><div class="s-why">Start at 0. Only raise to 4–5 if your stick drifts on its own. Lower = more responsive steering from the first millimetre of stick movement</div></div>
+          <div class="setting-row"><div class="s-name">Steering Deadzone Outside</div><div class="s-val">100</div><div class="s-why">Always 100. This is how far the stick must travel to reach maximum lock. At 100 you use the full physical range of the stick</div></div>
+          <div class="setting-row"><div class="s-name">Steering Linearity</div><div class="s-val">50–60</div><div class="s-why">50 is perfectly linear (1:1). 60 adds slight exponential curve — small inputs are gentler, useful for high-power cars. Most players find 50–60 the sweet spot</div></div>
+          <div class="setting-row"><div class="s-name">Acceleration Deadzone Inside</div><div class="s-val">0</div><div class="s-why">Car starts accelerating the instant you touch the trigger. Essential for precise throttle control out of corners</div></div>
+          <div class="setting-row"><div class="s-name">Acceleration Deadzone Outside</div><div class="s-val">100</div><div class="s-why">Full trigger travel = full throttle</div></div>
+          <div class="setting-row"><div class="s-name">Deceleration Deadzone Inside</div><div class="s-val">0</div><div class="s-why">Car brakes the instant you touch the brake trigger. Critical for trail braking into corners</div></div>
+          <div class="setting-row"><div class="s-name">Deceleration Deadzone Outside</div><div class="s-val">100</div><div class="s-why">Full trigger travel = maximum braking force</div></div>
+          <div class="setting-row"><div class="s-name">Vibration Scale</div><div class="s-val">60–80</div><div class="s-why">Vibration gives useful feedback — tyre slip, surface changes, curb strikes. Don't turn it off entirely. Too high causes hand fatigue in long sessions</div></div>
+        </div>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Stick drift fix</div>
+          If your car steers when you're not touching the stick, raise Steering Deadzone Inside gradually from 0 until it stops. Don't raise it more than necessary — every point reduces responsiveness. The fix is the deadzone, not the sensitivity or linearity.
+        </div>
+
+        <h2>Steering mode — the most important setting</h2>
+        <p>FH6 has three steering modes that fundamentally change how the car behaves:</p>
+        <ul>
+          <li><strong>Normal (default)</strong> — game assists and filters your steering input. Forgiving, less precise. Good for complete beginners.</li>
+          <li><strong>Simulation</strong> — removes much of the built-in steering assistance. More direct control, more precise, but more demanding. <strong>Recommended for experienced players.</strong></li>
+          <li><strong>Traditional</strong> — an older Forza input model. Avoid unless you specifically prefer it.</li>
+        </ul>
+        <p>Simulation steering combined with low deadzones gives the most precise feel. It may feel overly sensitive initially — give it 30–60 minutes before reverting. The precision is worth the adjustment period.</p>
+
+        <h2>Recommended wheel settings</h2>
+        <p>Wheel support in FH6 is significantly improved over FH5, especially for direct-drive hardware (Fanatec, MOZA, Thrustmaster T-GT). The game is still primarily designed around controllers, so wheel tuning requires more manual adjustment than a sim racer. Make changes <strong>one setting at a time</strong> — wheel settings interact with each other unpredictably.</p>
+
+        <div class="settings-block">
+          <div class="sb-title">Wheel — Baseline Settings (900° rotation)</div>
+          <div class="setting-row"><div class="s-name">Steering Deadzone Inside</div><div class="s-val">0</div><div class="s-why">Eliminates the dead spot at wheel center. Set to 0 for full 900° sweep</div></div>
+          <div class="setting-row"><div class="s-name">Steering Deadzone Outside</div><div class="s-val">100</div><div class="s-why">Gives you the full physical rotation range of the wheel</div></div>
+          <div class="setting-row"><div class="s-name">Steering Linearity</div><div class="s-val">50</div><div class="s-why">Perfectly linear 1:1 mapping across the full arc. Don't change this unless advised by wheel-specific guides</div></div>
+          <div class="setting-row"><div class="s-name">All pedal deadzones (inside)</div><div class="s-val">0</div><div class="s-why">Pedals should respond from the first millimetre of travel</div></div>
+          <div class="setting-row"><div class="s-name">All pedal deadzones (outside)</div><div class="s-val">100</div><div class="s-why">Full pedal travel = full input</div></div>
+          <div class="setting-row"><div class="s-name">Force Feedback Scale</div><div class="s-val">60–80</div><div class="s-why">Varies by wheel. Start at 60, raise until you feel clear road texture. Too high = violent wheel shake on curbs</div></div>
+          <div class="setting-row"><div class="s-name">Road Feel Scale</div><div class="s-val">0.5</div><div class="s-why">Keep low to prevent violent desk-shaking on dirt sections. Raise slowly to taste</div></div>
+          <div class="setting-row"><div class="s-name">Off-Road Feel Scale</div><div class="s-val">0.1</div><div class="s-why">Very low — prevents wheel kickback on rough terrain</div></div>
+          <div class="setting-row"><div class="s-name">Load Sensitivity</div><div class="s-val">1.5</div><div class="s-why">Eliminates the lazy counter-steering response in the default profile. Makes inputs feel immediate</div></div>
+          <div class="setting-row"><div class="s-name">Center Spring Scale</div><div class="s-val">0–0.3</div><div class="s-why">Keep very low or off. High values cancel out dynamic force feedback, making the wheel feel artificial</div></div>
+          <div class="setting-row"><div class="s-name">Wheel Damper</div><div class="s-val">Low–medium</div><div class="s-why">High-torque direct-drive wheels can use some damper. Logitech G920/G29 feel better with it turned down</div></div>
+        </div>
+
+        <h2>Diagnosing input problems</h2>
+        <div class="diag-grid">
+          <div class="diag-card"><div class="dc-symptom">Steering feels sluggish / delayed</div><div class="dc-fix"><strong>Lower Steering Deadzone Inside</strong> toward 0. Also check Steering Linearity isn't set above 70.</div></div>
+          <div class="diag-card"><div class="dc-symptom">Car steers without input (stick drift)</div><div class="dc-fix"><strong>Raise Steering Deadzone Inside</strong> from 0 to 4–5. Don't over-correct — raise only until the drift stops.</div></div>
+          <div class="diag-card"><div class="dc-symptom">Throttle / brake doesn't respond immediately</div><div class="dc-fix"><strong>Set trigger deadzones inside to 0.</strong> Both acceleration and deceleration should respond from first touch.</div></div>
+          <div class="diag-card"><div class="dc-symptom">Wheel shaking violently on dirt</div><div class="dc-fix"><strong>Lower Off-Road Feel Scale to 0.05–0.1.</strong> Also reduce Force Feedback Scale if general shaking is too intense.</div></div>
+          <div class="diag-card"><div class="dc-symptom">Wheel feels dead / no road texture</div><div class="dc-fix"><strong>Raise Road Feel Scale gradually</strong> from 0.5 upward. Also check Center Spring Scale isn't too high — it masks dynamic FFB.</div></div>
+          <div class="diag-card"><div class="dc-symptom">Twitchy steering at speed</div><div class="dc-fix"><strong>Raise Steering Linearity</strong> to 60–65. This softens small inputs without losing responsiveness at full lock.</div></div>
+        </div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Advanced guides</div>
+        <ul class="sidebar-links">
+          <li><a href="tuning-guide.html">Tuning guide</a></li>
+          <li><a href="drift-guide.html">Drift guide</a></li>
+          <li><a href="tune-share-codes.html">Tune share codes</a></li>
+          <li><a href="pc-settings.html">PC settings</a></li>
+          <li><a href="controller-wheel.html" class="current">Controller &amp; Wheel</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Controller quick start</div>
+        <div style="font-size:11px;font-family:var(--font-mono);display:flex;flex-direction:column;gap:4px;color:var(--muted)">
+          <div style="color:var(--text);padding:3px 0">Steering DZ Inside: 0 (or 4–5 if drifting)</div>
+          <div style="padding:3px 0">Steering DZ Outside: 100</div>
+          <div style="padding:3px 0">Linearity: 50–60</div>
+          <div style="padding:3px 0">All trigger DZ inside: 0</div>
+          <div style="padding:3px 0">All trigger DZ outside: 100</div>
+          <div style="padding:3px 0">Steering mode: Simulation</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer>
+  <div><div class="footer-logo">FH6<span>Guide</span></div><div class="footer-note" style="margin-top:5px">Fan-made guide · Not affiliated with Playground Games or Xbox</div></div>
+  <div class="footer-note">© 2026 FH6Guide · fh6guide.org</div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))d.classList.remove('open')});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})});
+</script>
+</body></html>
