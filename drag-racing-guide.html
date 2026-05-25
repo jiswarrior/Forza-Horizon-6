@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Drag Racing Guide — Drag Meet Tips & Best Cars 2026 | FH6Guide</title>
+<meta name="description" content="Complete FH6 drag racing guide: how to enter Drag Meets, best drag cars by class, launch control tips, tune settings, and how to win every race.">
+<link rel="canonical" href="https://www.fh6guide.org/drag-racing-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0c;--bg2:#111116;--bg3:#18181f;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
+  --accent:#e8ff47;--accent2:#ff6b35;--accent3:#47c5ff;
+  --text:#f0efe8;--muted:#7a7a88;--muted2:#4a4a58;
+  --green:#1D9E75;--amber:#BA7517;--red:#ff4d4d;--purple:#7F77DD;
+  --font-disp:'Bebas Neue',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --font-mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}
+.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}
+.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.03em;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;cursor:text;flex-shrink:0}
+.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:180px}
+.nav-search input::placeholder{color:var(--muted2)}
+.nav-search svg{color:var(--muted);flex-shrink:0}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0;background:none;border:none}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}
+.nav-drawer.open{display:flex}
+.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}
+.nav-drawer a:hover{color:var(--text)}
+.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}
+.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}
+.nav-drawer-search input::placeholder{color:var(--muted2)}
+
+/* PAGE WRAP */
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+
+/* BREADCRUMB */
+.breadcrumb{padding:16px 0 0;display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.breadcrumb a{color:var(--muted);transition:color .15s}
+.breadcrumb a:hover{color:var(--text)}
+
+/* CONTENT WRAP */
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+
+/* ARTICLE */
+.article-label{font-family:var(--font-mono);font-size:10px;color:var(--accent2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.article-label::before{content:'';display:block;width:20px;height:1px;background:var(--accent2)}
+.article-title{font-family:var(--font-disp);font-size:clamp(36px,6vw,60px);line-height:.95;letter-spacing:.02em;margin-bottom:16px}
+.article-meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.article-meta-item{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.06em;display:flex;align-items:center;gap:5px}
+.article-intro{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:32px;padding:16px 20px;background:var(--bg2);border-left:3px solid var(--accent2);border-radius:0 6px 6px 0}
+
+/* TAG */
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px;border:1px solid;display:inline-block}
+.tag-advanced{color:var(--accent2);border-color:rgba(255,107,53,0.3);background:rgba(255,107,53,0.08)}
+.tag-cars{color:var(--accent3);border-color:rgba(71,197,255,0.3);background:rgba(71,197,255,0.08)}
+.article-tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+
+/* PROSE */
+.prose h2{font-family:var(--font-disp);font-size:26px;letter-spacing:.04em;margin:40px 0 14px;color:var(--text)}
+.prose h3{font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-mono);color:var(--accent2);margin:28px 0 10px}
+.prose p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px}
+.prose p strong{color:var(--text);font-weight:500}
+
+/* INFO BOX */
+.info-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin:20px 0}
+.info-box-label{font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.tip-box{background:rgba(255,107,53,0.05);border:1px solid rgba(255,107,53,0.2);border-radius:8px;padding:14px 16px;margin:20px 0}
+.tip-box-label{font-family:var(--font-mono);font-size:9px;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.tip-box p{font-size:13px;color:var(--muted);margin:0}
+
+/* STAT GRID */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;text-align:center}
+.stat-val{font-family:var(--font-disp);font-size:28px;color:var(--accent2);letter-spacing:.04em;line-height:1}
+.stat-lbl{font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:0;position:relative;margin:20px 0}
+.steps::before{content:'';position:absolute;left:15px;top:20px;bottom:20px;width:1px;background:var(--border2)}
+.step{display:flex;gap:16px;align-items:flex-start;padding:10px 0}
+.step-num{width:30px;height:30px;border-radius:50%;background:var(--bg2);border:1px solid var(--border2);font-family:var(--font-mono);font-size:11px;color:var(--accent2);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1}
+.step-content{}
+.step-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px}
+.step-desc{font-size:13px;color:var(--muted);line-height:1.55}
+
+/* CAR TABLE */
+.car-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+.car-table th{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border2);background:var(--bg2)}
+.car-table td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted)}
+.car-table tr:hover td{background:var(--bg2)}
+.car-table td:first-child{color:var(--text);font-weight:500}
+.rating{font-family:var(--font-mono);font-size:11px;padding:2px 6px;border-radius:3px;background:rgba(232,255,71,0.08);color:var(--accent);border:1px solid rgba(232,255,71,0.2)}
+.rating.s{background:rgba(255,77,77,0.08);color:var(--red);border-color:rgba(255,77,77,0.2)}
+
+/* LAUNCH DIAGRAM */
+.launch-diagram{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;margin:24px 0;overflow:hidden}
+.launch-diagram-title{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.rpm-bar-wrap{display:flex;flex-direction:column;gap:8px}
+.rpm-row{display:flex;align-items:center;gap:12px;font-size:12px}
+.rpm-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);width:90px;flex-shrink:0}
+.rpm-bar{flex:1;height:20px;border-radius:3px;position:relative;overflow:hidden}
+.rpm-fill{height:100%;border-radius:3px;transition:width .3s}
+.rpm-val{font-family:var(--font-mono);font-size:10px;color:var(--muted);width:50px;text-align:right;flex-shrink:0}
+.zone-bad{background:rgba(255,77,77,0.2)}
+.zone-bad .rpm-fill{background:linear-gradient(90deg,rgba(255,77,77,0.4),rgba(255,77,77,0.6))}
+.zone-ok{background:rgba(186,117,23,0.2)}
+.zone-ok .rpm-fill{background:linear-gradient(90deg,rgba(186,117,23,0.4),rgba(186,117,23,0.6))}
+.zone-good{background:rgba(29,158,117,0.2)}
+.zone-good .rpm-fill{background:linear-gradient(90deg,rgba(29,158,117,0.4),rgba(29,158,117,0.6))}
+.zone-best{background:rgba(232,255,71,0.2)}
+.zone-best .rpm-fill{background:linear-gradient(90deg,rgba(232,255,71,0.4),rgba(232,255,71,0.7))}
+
+/* SIDEBAR */
+.sidebar{}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:16px}
+.sidebar-title{font-family:var(--font-disp);font-size:16px;letter-spacing:.04em;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.sidebar-links{display:flex;flex-direction:column;gap:2px}
+.sidebar-link{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:6px;font-size:13px;color:var(--muted);transition:background .15s,color .15s}
+.sidebar-link:hover{background:var(--bg3);color:var(--text)}
+.sidebar-link svg{flex-shrink:0;color:var(--muted2)}
+.sidebar-divider{height:1px;background:var(--border);margin:6px 0}
+.quick-fact{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.quick-fact:last-child{border-bottom:none}
+.quick-fact-label{color:var(--muted)}
+.quick-fact-val{font-family:var(--font-mono);font-size:11px;color:var(--text)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:36px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}
+.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2);letter-spacing:.06em}
+.footer-links{display:flex;gap:20px;list-style:none}
+.footer-links a{font-size:12px;color:var(--muted);transition:color .15s}
+.footer-links a:hover{color:var(--text)}
+
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}
+  .nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}
+  .content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}
+  .prose h2{font-size:22px}
+  .stat-grid{grid-template-columns:repeat(3,1fr)}
+  footer{flex-direction:column;align-items:flex-start;padding:28px 1.25rem}
+}
+@media(max-width:480px){
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .car-table{font-size:12px}
+  .car-table th,.car-table td{padding:7px 8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html" class="active">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html">Advanced</a></li>
+  </ul>
+  <div class="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html" class="active">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html">Advanced</a>
+  <div class="nav-drawer-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span style="color:var(--muted2)">/</span>
+    <a href="car-tier-list.html">Cars &amp; Garage</a>
+    <span style="color:var(--muted2)">/</span>
+    Drag Racing Guide
+  </div>
+
+  <div class="content-wrap">
+    <article>
+      <div class="article-label">Advanced Guide</div>
+      <h1 class="article-title">Drag Racing Guide</h1>
+      <div class="article-tags">
+        <span class="tag tag-advanced">Advanced</span>
+        <span class="tag tag-cars">Cars</span>
+      </div>
+      <div class="article-meta">
+        <span class="article-meta-item">Updated May 22, 2026</span>
+        <span class="article-meta-item">~8 min read</span>
+      </div>
+      <p class="article-intro">Drag Meets are FH6's dedicated quarter-mile drag racing events — separate from the main race calendar, with their own scoring and leaderboards. This guide covers how to enter, how to launch properly, the best drag builds by class, and how to tune specifically for the strip.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-val">¼</div>
+          <div class="stat-lbl">Mile Track</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">6</div>
+          <div class="stat-lbl">Car Classes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">3</div>
+          <div class="stat-lbl">Strip Venues</div>
+        </div>
+      </div>
+
+      <div class="prose">
+
+        <h2>How Drag Meets Work</h2>
+        <p>Drag Meets appear on the Japan map as purple flag icons — there are <strong>three locations</strong> in FH6: one in Nangan near the industrial port, one in the Hokubu plains, and one on a long straight in Sotoyama. Walk up (or drive up) to the staging area to join an event.</p>
+        <p>Each race is a side-by-side quarter-mile run. You choose a class bracket before entering — S1, S2, A, B, and the open X class. All cars competing in a bracket must fall within that PI range. The race tree uses an authentic four-amber start sequence with a reaction-time display after each run.</p>
+
+        <h3>Finding & Entering a Meet</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="step-title">Open the map and filter for Drag Meets</div>
+              <div class="step-desc">Use the event filter (D-pad right on controller) and select "Drag Meet." All three venues will appear as purple icons.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="step-title">Drive to the staging area</div>
+              <div class="step-desc">Park in the designated prep zone. A class bracket menu appears — confirm your car's PI matches the bracket you want.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="step-title">Select your class and wait for a ghost opponent or live player</div>
+              <div class="step-desc">In offline mode you race a ghost drivatar set to your skill level. Online, matchmaking finds a live opponent in the same class.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <div class="step-title">Stage and react to the tree</div>
+              <div class="step-desc">Hold brake + throttle to pre-stage. Release brake when the last amber lights up. Reaction time under 0.4s is considered good; under 0.2s is excellent.</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Launch Control & the RPM Zone</h2>
+        <p>Your launch RPM is everything in drag racing. Too low and you bog off the line; too high and you spin the tires through the first 50 meters. Every car has a sweet spot — the launch diagram below shows the general zones for most RWD builds in S1 class.</p>
+
+        <div class="launch-diagram">
+          <div class="launch-diagram-title">// Launch RPM zones — S1 RWD reference</div>
+          <div class="rpm-bar-wrap">
+            <div class="rpm-row">
+              <div class="rpm-label">Below 3,500</div>
+              <div class="rpm-bar zone-bad"><div class="rpm-fill" style="width:35%"></div></div>
+              <div class="rpm-val" style="color:var(--red)">Too low</div>
+            </div>
+            <div class="rpm-row">
+              <div class="rpm-label">3,500–4,500</div>
+              <div class="rpm-bar zone-ok"><div class="rpm-fill" style="width:65%"></div></div>
+              <div class="rpm-val" style="color:#BA7517">Mediocre</div>
+            </div>
+            <div class="rpm-row">
+              <div class="rpm-label">4,500–5,500</div>
+              <div class="rpm-bar zone-good"><div class="rpm-fill" style="width:82%"></div></div>
+              <div class="rpm-val" style="color:var(--green)">Good</div>
+            </div>
+            <div class="rpm-row">
+              <div class="rpm-label">5,500–6,200</div>
+              <div class="rpm-bar zone-best"><div class="rpm-fill" style="width:100%"></div></div>
+              <div class="rpm-val" style="color:var(--accent)">Optimal</div>
+            </div>
+            <div class="rpm-row">
+              <div class="rpm-label">Above 6,200</div>
+              <div class="rpm-bar zone-bad"><div class="rpm-fill" style="width:45%"></div></div>
+              <div class="rpm-val" style="color:var(--red)">Wheelspin</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-box-label">💡 Pro tip</div>
+          <p>AWD cars can launch at much higher RPM — up to 7,000+ without spinning — because power is distributed to all four wheels. This is why AWD builds often dominate drag times on stock setups, even if they're slower on top speed.</p>
+        </div>
+
+        <h2>Best Drag Cars by Class</h2>
+        <p>These picks prioritize cars that are easy to build and consistently post competitive times. All can be found in the main Autoshow or Auction House.</p>
+
+        <table class="car-table">
+          <thead>
+            <tr>
+              <th>Car</th>
+              <th>Class</th>
+              <th>Drive</th>
+              <th>Est. ¼ Mile</th>
+              <th>Why It Works</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2020 Dodge Challenger SRT Hellcat Redeye</td>
+              <td><span class="rating">S1</span></td>
+              <td>RWD</td>
+              <td>~9.4s</td>
+              <td>Big torque, great gearing</td>
+            </tr>
+            <tr>
+              <td>2018 Bugatti Chiron</td>
+              <td><span class="rating s">X</span></td>
+              <td>AWD</td>
+              <td>~7.8s</td>
+              <td>W16 quad-turbo, no equal</td>
+            </tr>
+            <tr>
+              <td>2015 Dodge Challenger SRT 392</td>
+              <td><span class="rating">A</span></td>
+              <td>RWD</td>
+              <td>~10.6s</td>
+              <td>Cheap to build, consistent</td>
+            </tr>
+            <tr>
+              <td>2017 Koenigsegg Agera RS</td>
+              <td><span class="rating s">X</span></td>
+              <td>RWD</td>
+              <td>~8.1s</td>
+              <td>Top speed monster</td>
+            </tr>
+            <tr>
+              <td>1969 Dodge Charger R/T (treasure car)</td>
+              <td><span class="rating">B</span></td>
+              <td>RWD</td>
+              <td>~11.8s</td>
+              <td>Free car, strong B class</td>
+            </tr>
+            <tr>
+              <td>2021 Lamborghini Huracán STO</td>
+              <td><span class="rating">S2</span></td>
+              <td>RWD</td>
+              <td>~8.9s</td>
+              <td>Perfect S2 candidate</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Drag-Specific Tuning Tips</h2>
+        <h3>Tires</h3>
+        <p>Widen the rear tires to maximum. Switch to drag compound (if equipped). Lower tire pressure to 1.5–1.8 bar rear for more contact patch. Front tires can be narrowed to reduce rolling resistance — you don't need steering grip in a straight line.</p>
+
+        <h3>Gearing</h3>
+        <p>Shorten final drive to keep you in peak power through the quarter mile. Ideally you want to hit your power peak in 2nd gear and redline just before the finish line in 4th. If you're shifting more than 4 times, your gearing is probably too short.</p>
+
+        <h3>Suspension</h3>
+        <p>Set rear ride height as low as possible — this shifts weight forward on launch, loading the rear tires. Increase rear spring stiffness slightly to prevent squat. Set front antiroll bar soft so weight transfers to the rear wheels on acceleration.</p>
+
+        <h3>Differential</h3>
+        <p>For RWD, set rear differential acceleration to 100% — this locks the axle under power for maximum traction. Deceleration can stay at 0% since you're never braking in a drag race.</p>
+
+        <div class="info-box">
+          <div class="info-box-label">Drag vs. Circuit setups</div>
+          <p style="font-size:13px;color:var(--muted);margin:0">Never take your drag-tuned car into a circuit race. The locked differential, narrow front tires, and low ride height will make cornering nearly impossible. Always save drag tunes as a separate slot in your tuning presets.</p>
+        </div>
+
+        <h2>Drag Meet Rewards</h2>
+        <p>Each Drag Meet run earns Credits and XP regardless of win or loss — but wins pay out roughly <strong>40% more</strong>. A clean bracket win (consistent reaction times, no redlight) adds a Perfect Run bonus. Finishing a full day of 10 bracket races awards a Drag Season bonus that scales with your win rate.</p>
+        <p>Drag Meet wins also count toward the <strong>"Full Send"</strong> achievement group, which requires 50 total Drag Meet wins across all brackets.</p>
+
+      </div>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-title">Quick Facts</div>
+        <div class="quick-fact"><span class="quick-fact-label">Track length</span><span class="quick-fact-val">¼ mile</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Venues</span><span class="quick-fact-val">3 in Japan</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Classes</span><span class="quick-fact-val">B / A / S1 / S2 / X</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Good reaction</span><span class="quick-fact-val">&lt; 0.4s</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Best launch RPM</span><span class="quick-fact-val">5,500–6,200</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Achievement target</span><span class="quick-fact-val">50 wins</span></div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Related Guides</div>
+        <div class="sidebar-links">
+          <a href="tuning-guide.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2"/></svg>
+            Tuning Guide — all settings
+          </a>
+          <a href="car-tier-list.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+            Car Tier List
+          </a>
+          <a href="best-cars-by-type.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M9 21h10a2 2 0 002-2v-7a2 2 0 00-2-2H9a2 2 0 00-2 2v7a2 2 0 002 2z"/></svg>
+            Best Cars by Event Type
+          </a>
+          <a href="drift-guide.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg>
+            Drift Guide
+          </a>
+          <a href="tune-share-codes.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/></svg>
+            Tune Share Codes
+          </a>
+        </div>
+      </div>
+      <div class="sidebar-card" style="background:rgba(255,107,53,0.04);border-color:rgba(255,107,53,0.15)">
+        <div class="sidebar-title" style="color:var(--accent2)">AWD vs RWD Drag</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6">AWD builds have faster 60-foot times due to better traction off the line. RWD builds often win in top-speed classes (S2, X) where the weight penalty of AWD conversion costs more than the traction gains.</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">FH6<span>Guide</span></div>
+    <div class="footer-note" style="margin-top:6px;">Fan-made guide site · Not affiliated with Playground Games or Xbox Game Studios</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Submit a guide</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){
+  var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');
+  if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))
+    d.classList.remove('open')
+});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})
+});
+</script>
+</body>
+</html>

@@ -318,8 +318,8 @@ section { padding: 52px 0; }
 .tag-cars        { color: var(--accent3); border-color: rgba(71,197,255,0.3); background: rgba(71,197,255,0.08); }
 .tag-progression { color: #9f7fe8; border-color: rgba(159,127,232,0.3); background: rgba(159,127,232,0.08); }
 .tag-advanced    { color: var(--accent2); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.08); }
-.tag-hot { color: var(--red); border-color: rgba(255,77,77,0.3); background: rgba(255,77,77,0.08); }
-.tag-endgame { color: var(--accent); border-color: rgba(232,255,71,0.3); background: rgba(232,255,71,0.08); }
+.tag-hot         { color: var(--red); border-color: rgba(255,77,77,0.3); background: rgba(255,77,77,0.08); }
+.tag-endgame     { color: var(--accent); border-color: rgba(232,255,71,0.3); background: rgba(232,255,71,0.08); }
 
 .card-title {
   font-size: 15px;
@@ -616,7 +616,7 @@ footer {
   display: flex;
   gap: 0;
   white-space: nowrap;
-  animation: ticker 30s linear infinite;
+  animation: ticker 36s linear infinite;
 }
 @keyframes ticker {
   from { transform: translateX(0); }
@@ -637,8 +637,6 @@ footer {
   color: var(--muted2);
 }
 .ticker-item .hi { color: var(--accent); }
-
-/* ── SVG ICONS (inline) ── */
 
 /* ── RESPONSIVE — MOBILE ── */
 
@@ -824,6 +822,7 @@ footer {
 </div>
 
 <!-- TICKER -->
+<!-- ↓↓↓ 更新：新增4条新页面相关条目，ticker内容翻倍保持循环连续 ↓↓↓ -->
 <div class="ticker-wrap">
   <div class="ticker-inner">
     <span class="ticker-item"><span class="hi">NEW</span> Forza Horizon 6 launched May 19, 2026</span>
@@ -832,12 +831,26 @@ footer {
     <span class="ticker-item"><span class="hi">HOT</span> Wristband guide — unlock Legend Island</span>
     <span class="ticker-item">270K+ Steam peak players at launch</span>
     <span class="ticker-item">Festival Playlist resets every Thursday</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Skill Points guide — farm SP fast</span>
+    <span class="ticker-item">Best cars by event type — Road, Dirt, Drag & Drift</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Forza Edition cars — all 24 FE cars listed</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Drag Meet guide — launch control &amp; best builds</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Touge Battles — 1v1 mountain duel tactics</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Beginner car guide — best buys in the first 3 hours</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Car Mastery guide — best perks ranked S to C</span>
     <span class="ticker-item"><span class="hi">NEW</span> Forza Horizon 6 launched May 19, 2026</span>
     <span class="ticker-item">15 Barn Finds hidden across Japan</span>
     <span class="ticker-item">9 Treasure Cars — one per region</span>
     <span class="ticker-item"><span class="hi">HOT</span> Wristband guide — unlock Legend Island</span>
     <span class="ticker-item">270K+ Steam peak players at launch</span>
     <span class="ticker-item">Festival Playlist resets every Thursday</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Skill Points guide — farm SP fast</span>
+    <span class="ticker-item">Best cars by event type — Road, Dirt, Drag & Drift</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Forza Edition cars — all 24 FE cars listed</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Drag Meet guide — launch control &amp; best builds</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Touge Battles — 1v1 mountain duel tactics</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Beginner car guide — best buys in the first 3 hours</span>
+    <span class="ticker-item"><span class="hi">NEW</span> Car Mastery guide — best perks ranked S to C</span>
   </div>
 </div>
 
@@ -849,9 +862,10 @@ footer {
     <div class="hero-eyebrow">Forza Horizon 6 — Japan · 2026</div>
     <h1>Every<br><span class="outline">guide</span> you<br>need to <span class="accent">win.</span></h1>
     <p class="hero-sub">Barn Finds, Treasure Cars, Car Tier Lists, Tuning Codes, Wristband progression and more — all in one place, updated daily.</p>
+    <!-- ↓↓↓ 更新：Guide pages 27→25，Cars in game 550+→618 ↓↓↓ -->
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-val">27</div>
+        <div class="hero-stat-val">29</div>
         <div class="hero-stat-lbl">Guide pages</div>
       </div>
       <div>
@@ -863,7 +877,7 @@ footer {
         <div class="hero-stat-lbl">Treasure Cars</div>
       </div>
       <div>
-        <div class="hero-stat-val">550+</div>
+        <div class="hero-stat-val">618</div>
         <div class="hero-stat-lbl">Cars in game</div>
       </div>
     </div>
@@ -983,6 +997,7 @@ footer {
 </div>
 
 <!-- SECTIONS -->
+<!-- ↓↓↓ 更新：各板块新增新页面入口链接 ↓↓↓ -->
 <div style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
 <div class="page-wrap">
 <section style="padding: 36px 0;">
@@ -991,6 +1006,7 @@ footer {
   </div>
   <div class="sections-row">
 
+    <!-- Getting Started — 新增 skill-points-guide.html -->
     <div class="section-card s-green">
       <div class="sc-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l9-9 9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9"/></svg>
@@ -1000,11 +1016,13 @@ footer {
         <li><a href="getting-started.html" style="color:var(--muted)">Beginner's guide</a></li>
         <li><a href="player-houses.html" style="color:var(--muted)">Player houses</a></li>
         <li><a href="xp-credits-farming.html" style="color:var(--muted)">Credits farming</a></li>
+        <li><a href="skill-points-guide.html" style="color:var(--muted)">Skill Points guide</a></li>
         <li><a href="xp-boards.html" style="color:var(--muted)">XP Boards (200)</a></li>
         <li><a href="festival-playlist.html" style="color:var(--muted)">Festival Playlist</a></li>
       </ul>
     </div>
 
+    <!-- Cars & Garage — added car-mastery-guide.html and beginner-car-guide.html -->
     <div class="section-card s-blue">
       <div class="sc-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M9 21h10a2 2 0 002-2v-7a2 2 0 00-2-2H9a2 2 0 00-2 2v7a2 2 0 002 2z"/></svg>
@@ -1012,12 +1030,16 @@ footer {
       <div class="sc-title">Cars & Garage</div>
       <ul class="sc-pages">
         <li><a href="car-tier-list.html" style="color:var(--muted)">Car tier list</a></li>
+        <li><a href="best-cars-by-type.html" style="color:var(--muted)">Best cars by event type</a></li>
+        <li><a href="beginner-car-guide.html" style="color:var(--muted)">Beginner car guide</a></li>
+        <li><a href="forza-edition-cars.html" style="color:var(--muted)">Forza Edition cars</a></li>
+        <li><a href="car-mastery-guide.html" style="color:var(--muted)">Car Mastery guide</a></li>
         <li><a href="car-list.html" style="color:var(--muted)">Full car list (618)</a></li>
         <li><a href="auction-house.html" style="color:var(--muted)">Auction House guide</a></li>
-        <li><a href="xp-credits-farming.html" style="color:var(--muted)">Credits farming</a></li>
       </ul>
     </div>
 
+    <!-- Collectibles & Map — 无变化 -->
     <div class="section-card s-amber">
       <div class="sc-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
@@ -1031,6 +1053,7 @@ footer {
       </ul>
     </div>
 
+    <!-- Progression — 无变化 -->
     <div class="section-card s-purple">
       <div class="sc-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
@@ -1045,6 +1068,7 @@ footer {
       </ul>
     </div>
 
+    <!-- Advanced & Setup — added drag-racing-guide.html and touge-battles-guide.html -->
     <div class="section-card s-coral">
       <div class="sc-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2m15.66 5.66l-1.41-1.41M4.34 19.07l1.41-1.41"/></svg>
@@ -1053,6 +1077,9 @@ footer {
       <ul class="sc-pages">
         <li><a href="tuning-guide.html" style="color:var(--muted)">Tuning guide</a></li>
         <li><a href="drift-guide.html" style="color:var(--muted)">Drift guide</a></li>
+        <li><a href="drag-racing-guide.html" style="color:var(--muted)">Drag racing guide</a></li>
+        <li><a href="touge-battles-guide.html" style="color:var(--muted)">Touge Battles guide</a></li>
+        <li><a href="photo-challenges.html" style="color:var(--muted)">Photo Mode &amp; Challenges</a></li>
         <li><a href="controller-wheel.html" style="color:var(--muted)">Controller &amp; Wheel</a></li>
         <li><a href="pc-settings.html" style="color:var(--muted)">Best PC settings</a></li>
       </ul>
@@ -1071,7 +1098,7 @@ footer {
       <div class="section-label">How FH6 progression works</div>
       <div class="section-title">Three tracks, one goal</div>
     </div>
-    <a href="#" class="view-all">Full progression guide →</a>
+    <a href="progression.html" class="view-all">Full progression guide →</a>
   </div>
 
   <div class="progression-wrap">
@@ -1143,7 +1170,7 @@ footer {
       <div class="section-label">Resets every Thursday</div>
       <div class="section-title">Festival Playlist — this week</div>
     </div>
-    <a href="#" class="view-all">Full playlist guide →</a>
+    <a href="festival-playlist.html" class="view-all">Full playlist guide →</a>
   </div>
   <div class="weekly-banner">
     <div class="weekly-badge">
@@ -1183,21 +1210,14 @@ footer {
 </footer>
 
 <script>
-function toggleNav() {
-  const drawer = document.getElementById('navDrawer');
-  drawer.classList.toggle('open');
-}
-// Close drawer when clicking outside
-document.addEventListener('click', function(e) {
-  const drawer = document.getElementById('navDrawer');
-  const btn = document.querySelector('.nav-hamburger');
-  if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
-    drawer.classList.remove('open');
-  }
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){
+  var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');
+  if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))
+    d.classList.remove('open')
 });
-// Close drawer on link click
-document.querySelectorAll('.nav-drawer a').forEach(a => {
-  a.addEventListener('click', () => document.getElementById('navDrawer').classList.remove('open'));
+document.querySelectorAll('.nav-drawer a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})
 });
 </script>
 </body>

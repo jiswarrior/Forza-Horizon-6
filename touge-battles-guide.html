@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Touge Battle Guide — Tips, Best Cars & Routes 2026 | FH6Guide</title>
+<meta name="description" content="Master FH6 Touge Showdown: all 5 mountain pass routes, best cars for touge, point scoring explained, and tips to win every 1v1 mountain duel.">
+<link rel="canonical" href="https://www.fh6guide.org/touge-battles-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0c;--bg2:#111116;--bg3:#18181f;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
+  --accent:#e8ff47;--accent2:#ff6b35;--accent3:#47c5ff;
+  --text:#f0efe8;--muted:#7a7a88;--muted2:#4a4a58;
+  --green:#1D9E75;--amber:#BA7517;--red:#ff4d4d;--purple:#7F77DD;
+  --font-disp:'Bebas Neue',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --font-mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}
+.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}
+.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.03em;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;cursor:text;flex-shrink:0}
+.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:180px}
+.nav-search input::placeholder{color:var(--muted2)}
+.nav-search svg{color:var(--muted);flex-shrink:0}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0;background:none;border:none}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}
+.nav-drawer.open{display:flex}
+.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}
+.nav-drawer a:hover{color:var(--text)}
+.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}
+.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}
+.nav-drawer-search input::placeholder{color:var(--muted2)}
+
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+.breadcrumb{padding:16px 0 0;display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.breadcrumb a{color:var(--muted);transition:color .15s}
+.breadcrumb a:hover{color:var(--text)}
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+
+/* ARTICLE HEADER */
+.article-label{font-family:var(--font-mono);font-size:10px;color:var(--purple);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.article-label::before{content:'';display:block;width:20px;height:1px;background:var(--purple)}
+.article-title{font-family:var(--font-disp);font-size:clamp(36px,6vw,60px);line-height:.95;letter-spacing:.02em;margin-bottom:16px}
+.article-meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.article-meta-item{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.06em}
+.article-intro{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:32px;padding:16px 20px;background:var(--bg2);border-left:3px solid var(--purple);border-radius:0 6px 6px 0}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px;border:1px solid;display:inline-block}
+.tag-progression{color:var(--purple);border-color:rgba(127,119,221,0.3);background:rgba(127,119,221,0.08)}
+.tag-hot{color:var(--red);border-color:rgba(255,77,77,0.3);background:rgba(255,77,77,0.08)}
+.article-tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+
+/* PROSE */
+.prose h2{font-family:var(--font-disp);font-size:26px;letter-spacing:.04em;margin:40px 0 14px;color:var(--text)}
+.prose h3{font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-mono);color:var(--purple);margin:28px 0 10px}
+.prose p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px}
+.prose p strong{color:var(--text);font-weight:500}
+
+/* SCORE SYSTEM */
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
+.score-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;text-align:center}
+.score-val{font-family:var(--font-disp);font-size:28px;letter-spacing:.04em;line-height:1}
+.score-lbl{font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+.score-val.purple{color:var(--purple)}
+.score-val.amber{color:var(--amber)}
+.score-val.green{color:var(--green)}
+
+/* ROUTES TABLE */
+.route-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+.route-table th{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border2);background:var(--bg2)}
+.route-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
+.route-table tr:hover td{background:var(--bg2)}
+.route-table td:first-child{color:var(--text);font-weight:500}
+.difficulty{font-family:var(--font-mono);font-size:10px;padding:2px 7px;border-radius:3px;display:inline-block}
+.d-easy{color:var(--green);background:rgba(29,158,117,0.1);border:1px solid rgba(29,158,117,0.25)}
+.d-med{color:var(--amber);background:rgba(186,117,23,0.1);border:1px solid rgba(186,117,23,0.25)}
+.d-hard{color:var(--red);background:rgba(255,77,77,0.1);border:1px solid rgba(255,77,77,0.25)}
+
+/* MATCH FORMAT */
+.match-format{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;margin:24px 0}
+.match-format-title{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.match-rounds{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.round-pill{background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:8px 14px;text-align:center;flex:1;min-width:80px}
+.round-label{font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.round-desc{font-size:12px;color:var(--text);margin-top:2px}
+.round-arrow{color:var(--muted2);font-size:18px;flex-shrink:0}
+
+/* CAR PICKS */
+.car-pick{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin:10px 0;display:flex;align-items:flex-start;gap:14px}
+.car-pick-rank{font-family:var(--font-disp);font-size:32px;color:var(--muted2);letter-spacing:.04em;line-height:1;flex-shrink:0;width:28px}
+.car-pick-info{}
+.car-pick-name{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px}
+.car-pick-reason{font-size:12px;color:var(--muted);line-height:1.55}
+.car-pick-tag{font-family:var(--font-mono);font-size:9px;padding:2px 6px;border-radius:3px;background:rgba(127,119,221,0.1);color:var(--purple);border:1px solid rgba(127,119,221,0.2);display:inline-block;margin-top:4px}
+
+/* TIP BOX */
+.tip-box{background:rgba(127,119,221,0.05);border:1px solid rgba(127,119,221,0.2);border-radius:8px;padding:14px 16px;margin:20px 0}
+.tip-box-label{font-family:var(--font-mono);font-size:9px;color:var(--purple);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.tip-box p{font-size:13px;color:var(--muted);margin:0}
+
+/* PROS / CONS */
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.verdict-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.verdict-title{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.verdict-title.pro{color:var(--green)}
+.verdict-title.con{color:var(--red)}
+.verdict-list{display:flex;flex-direction:column;gap:5px}
+.verdict-item{font-size:12px;color:var(--muted);display:flex;gap:6px;align-items:flex-start}
+.verdict-item::before{flex-shrink:0;font-size:10px}
+.verdict-item.pro::before{content:'✓';color:var(--green)}
+.verdict-item.con::before{content:'✗';color:var(--red)}
+
+/* SIDEBAR */
+.sidebar{}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:16px}
+.sidebar-title{font-family:var(--font-disp);font-size:16px;letter-spacing:.04em;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.sidebar-links{display:flex;flex-direction:column;gap:2px}
+.sidebar-link{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:6px;font-size:13px;color:var(--muted);transition:background .15s,color .15s}
+.sidebar-link:hover{background:var(--bg3);color:var(--text)}
+.sidebar-link svg{flex-shrink:0;color:var(--muted2)}
+.quick-fact{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.quick-fact:last-child{border-bottom:none}
+.quick-fact-label{color:var(--muted)}
+.quick-fact-val{font-family:var(--font-mono);font-size:11px;color:var(--text)}
+
+footer{border-top:1px solid var(--border);padding:36px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}
+.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2);letter-spacing:.06em}
+.footer-links{display:flex;gap:20px;list-style:none}
+.footer-links a{font-size:12px;color:var(--muted);transition:color .15s}
+.footer-links a:hover{color:var(--text)}
+
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}
+  .nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}
+  .content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}
+  .prose h2{font-size:22px}
+  .score-grid{grid-template-columns:repeat(3,1fr)}
+  .match-rounds{flex-direction:column}
+  .round-arrow{transform:rotate(90deg)}
+  .verdict-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;align-items:flex-start;padding:28px 1.25rem}
+}
+@media(max-width:480px){
+  .score-grid{grid-template-columns:1fr 1fr}
+  .route-table{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html" class="active">Progression</a></li>
+    <li><a href="tuning-guide.html">Advanced</a></li>
+  </ul>
+  <div class="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html" class="active">Progression</a>
+  <a href="tuning-guide.html">Advanced</a>
+  <div class="nav-drawer-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span style="color:var(--muted2)">/</span>
+    <a href="progression.html">Progression</a>
+    <span style="color:var(--muted2)">/</span>
+    Touge Battles Guide
+  </div>
+
+  <div class="content-wrap">
+    <article>
+      <div class="article-label">Multiplayer Guide</div>
+      <h1 class="article-title">Touge Showdown Guide</h1>
+      <div class="article-tags">
+        <span class="tag tag-progression">Progression</span>
+        <span class="tag tag-hot">Hot</span>
+      </div>
+      <div class="article-meta">
+        <span class="article-meta-item">Updated May 22, 2026</span>
+        <span class="article-meta-item">~7 min read</span>
+      </div>
+      <p class="article-intro">Touge Showdown is one of FH6's two new multiplayer modes — a pure 1v1 mountain pass duel across 5 pre-set routes in Japan. Each match is best-of-3: one run down, one run up, one tiebreaker. The winner is whoever accumulates more points across all three legs. This guide breaks down every route, scoring, best car choices, and the tactics that separate winners from spinners.</p>
+
+      <div class="score-grid">
+        <div class="score-card">
+          <div class="score-val purple">5</div>
+          <div class="score-lbl">Routes in FH6</div>
+        </div>
+        <div class="score-card">
+          <div class="score-val amber">3</div>
+          <div class="score-lbl">Legs per match</div>
+        </div>
+        <div class="score-card">
+          <div class="score-val green">1v1</div>
+          <div class="score-lbl">Format</div>
+        </div>
+      </div>
+
+      <div class="prose">
+
+        <h2>Match Format Explained</h2>
+        <p>Each Touge match consists of exactly <strong>three legs</strong> on the same mountain route. The roles swap between legs — attacker (trying to pass) and defender (trying to block). In leg 3 (the tiebreaker) both players start simultaneously from opposite ends and race to the middle checkpoint first.</p>
+
+        <div class="match-format">
+          <div class="match-format-title">// Match structure — 3 legs per bout</div>
+          <div class="match-rounds">
+            <div class="round-pill">
+              <div class="round-label">Leg 1</div>
+              <div class="round-desc">P1 attacks → P2 defends</div>
+            </div>
+            <div class="round-arrow">→</div>
+            <div class="round-pill">
+              <div class="round-label">Leg 2</div>
+              <div class="round-desc">P2 attacks → P1 defends</div>
+            </div>
+            <div class="round-arrow">→</div>
+            <div class="round-pill">
+              <div class="round-label">Leg 3</div>
+              <div class="round-desc">Tiebreaker — simultaneous run</div>
+            </div>
+            <div class="round-arrow">→</div>
+            <div class="round-pill" style="border-color:rgba(127,119,221,0.3);background:rgba(127,119,221,0.05)">
+              <div class="round-label" style="color:var(--purple)">Winner</div>
+              <div class="round-desc">Most points wins</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Scoring</h3>
+        <p>Points are awarded continuously during each run, not just at the finish. The scoring categories are:</p>
+        <p><strong>Lead Distance:</strong> As the attacker, every meter you gain on the defender earns points. Closing a 50m gap earns ~2,000 points per leg.</p>
+        <p><strong>Clean Sections:</strong> Both attacker and defender earn bonus points for completing touge sections without hitting barriers or going off-road. Each clean section is worth 500 points.</p>
+        <p><strong>Overtake Bonus:</strong> Successfully passing the defender earns a flat 5,000-point bonus. This is the biggest single scoring event in the mode — prioritize it over everything else.</p>
+        <p><strong>Finish Bonus:</strong> Reaching the end of the route first adds a 2,500-point finish bonus per leg.</p>
+
+        <h2>The 5 Touge Routes</h2>
+        <p>Routes are selected randomly at the start of each matchmade game. In private lobbies you can manually pick any route. Routes vary significantly in character — some favor high-speed cornering, others are tight hairpin battles.</p>
+
+        <table class="route-table">
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>Region</th>
+              <th>Length</th>
+              <th>Character</th>
+              <th>Difficulty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shimanoyama Pass</td>
+              <td>Shimanoyama</td>
+              <td>~4.2 km</td>
+              <td>Classic hairpin-heavy touge; tight, low-speed corners with elevation drops. The definitive FH6 touge experience.</td>
+              <td><span class="difficulty d-med">Medium</span></td>
+            </tr>
+            <tr>
+              <td>Sotoyama Ridge</td>
+              <td>Sotoyama</td>
+              <td>~5.8 km</td>
+              <td>Long sweeping corners with a dramatic cliff-edge section. Fast cars dominate here; mistakes are punished hard.</td>
+              <td><span class="difficulty d-hard">Hard</span></td>
+            </tr>
+            <tr>
+              <td>Takashiro Descent</td>
+              <td>Takashiro</td>
+              <td>~3.6 km</td>
+              <td>Short, highly technical route near the waterfall area. Very consistent lap times — experience matters most.</td>
+              <td><span class="difficulty d-easy">Beginner</span></td>
+            </tr>
+            <tr>
+              <td>Nangan Coastal Cut</td>
+              <td>Nangan</td>
+              <td>~6.4 km</td>
+              <td>Hybrid route: tight mountain section transitions to fast coastal straights. Best route for high-PI cars.</td>
+              <td><span class="difficulty d-med">Medium</span></td>
+            </tr>
+            <tr>
+              <td>Hokubu Snow Pass</td>
+              <td>Hokubu</td>
+              <td>~4.8 km</td>
+              <td>Snow and mixed grip surfaces. AWD cars gain a huge advantage here; RWD requires excellent throttle control.</td>
+              <td><span class="difficulty d-hard">Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Best Cars for Touge</h2>
+        <p>Touge Showdown uses an open PI bracket — you can enter with any car up to S1 (800 PI). There's no class restriction. The winning strategy is usually <strong>A-class (700 PI) with exceptional handling</strong> rather than max-PI S1 cars with questionable cornering.</p>
+
+        <div class="car-pick">
+          <div class="car-pick-rank">1</div>
+          <div class="car-pick-info">
+            <div class="car-pick-name">1997 Nissan Skyline GT-R R33 — A Class (680 PI)</div>
+            <div class="car-pick-reason">The iconic touge car, now in FH6 with predictable AWD balance. Excellent rotation through hairpins and strong mid-corner speed. Tunable to be very aggressive on Shimanoyama and Takashiro routes.</div>
+            <div class="car-pick-tag">AWD · Best on hairpin routes</div>
+          </div>
+        </div>
+
+        <div class="car-pick">
+          <div class="car-pick-rank">2</div>
+          <div class="car-pick-info">
+            <div class="car-pick-name">2002 Subaru Impreza WRX STI — A Class (695 PI)</div>
+            <div class="car-pick-reason">Exceptional on Hokubu Snow Pass due to AWD and relatively low weight. The boxer engine gives quick throttle response through technical sections. One of the most consistent all-route picks.</div>
+            <div class="car-pick-tag">AWD · Best on Hokubu Snow</div>
+          </div>
+        </div>
+
+        <div class="car-pick">
+          <div class="car-pick-rank">3</div>
+          <div class="car-pick-info">
+            <div class="car-pick-name">1995 Mazda RX-7 FD — A Class (720 PI)</div>
+            <div class="car-pick-reason">The rotary legend. Lighter than everything else in its PI range, which means better deceleration into corners and faster direction changes. The go-to RWD option for experienced drivers who can manage oversteer.</div>
+            <div class="car-pick-tag">RWD · Best on tight routes</div>
+          </div>
+        </div>
+
+        <div class="car-pick">
+          <div class="car-pick-rank">4</div>
+          <div class="car-pick-info">
+            <div class="car-pick-name">2017 Honda NSX — S1 Class (790 PI)</div>
+            <div class="car-pick-reason">Best option if you want to run S1. Hybrid AWD system gives excellent traction without the weight penalty of a traditional AWD swap. Dominant on Nangan Coastal Cut and Sotoyama Ridge.</div>
+            <div class="car-pick-tag">AWD · Best on fast routes</div>
+          </div>
+        </div>
+
+        <h2>Attacker vs. Defender Strategy</h2>
+        <h3>Playing as the attacker</h3>
+        <p>Your job is to close the gap and eventually pass. <strong>Don't try to pass on every corner</strong> — identify 2–3 overtake opportunities per run (typically braking zones or long straights) and commit to them aggressively. The rest of the time, apply pressure by staying within 20m to score Lead Distance points.</p>
+        <p>If you can't pass, your goal becomes minimizing the point deficit. Drive clean sections to bank Clean Section bonuses even without the overtake.</p>
+
+        <h3>Playing as the defender</h3>
+        <p>Legitimate blocking is not only allowed but rewarded in Touge Showdown. <strong>Wide entry lines</strong> into hairpins naturally block the inside — this is the most effective defensive technique. If you're significantly faster than your opponent, simply drive your race line and they won't be able to pass.</p>
+        <p>Intentional ramming or using the environment as a block (parking in narrow sections) will result in a Sportsmanship penalty, docking 1,000 points from your total.</p>
+
+        <div class="tip-box">
+          <div class="tip-box-label">💡 Tiebreaker tip</div>
+          <p>In leg 3, you start from opposite ends of the route and both drive toward the midpoint checkpoint. The checkpoint is always at the most technically difficult section — usually a hairpin complex. Learn the approach from both directions before your first ranked match.</p>
+        </div>
+
+        <h2>AWD vs. RWD in Touge</h2>
+        <div class="verdict-grid">
+          <div class="verdict-box">
+            <div class="verdict-title pro">AWD Advantages</div>
+            <div class="verdict-list">
+              <div class="verdict-item pro">Dominant on Hokubu Snow Pass</div>
+              <div class="verdict-item pro">Better traction out of hairpins</div>
+              <div class="verdict-item pro">More forgiving to drive</div>
+              <div class="verdict-item pro">Easier to block on tight routes</div>
+            </div>
+          </div>
+          <div class="verdict-box">
+            <div class="verdict-title pro">RWD Advantages</div>
+            <div class="verdict-list">
+              <div class="verdict-item pro">Lighter at same PI</div>
+              <div class="verdict-item pro">Better mid-corner rotation</div>
+              <div class="verdict-item pro">Easier to pass under braking</div>
+              <div class="verdict-item pro">More fun (subjective)</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Rewards & Progression</h2>
+        <p>Winning Touge Showdown matches earns <strong>Touge Points</strong> which feed into a separate Touge leaderboard. Reaching top-1000 on the seasonal leaderboard awards the exclusive "Ridge Racer" title and a unique car livery.</p>
+        <p>Each match also earns standard Festival Points, making Touge Showdown one of the fastest Wristband leveling activities in the game — roughly 800–1,200 FP per match win.</p>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-title">Quick Facts</div>
+        <div class="quick-fact"><span class="quick-fact-label">Mode type</span><span class="quick-fact-val">1v1 Multiplayer</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Legs per match</span><span class="quick-fact-val">3 (best-of-3)</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Routes</span><span class="quick-fact-val">5 in Japan</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Max PI</span><span class="quick-fact-val">S1 (800)</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">Overtake bonus</span><span class="quick-fact-val">5,000 pts</span></div>
+        <div class="quick-fact"><span class="quick-fact-label">FP per win</span><span class="quick-fact-val">~800–1,200</span></div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Related Guides</div>
+        <div class="sidebar-links">
+          <a href="multiplayer-guide.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>
+            Full Multiplayer Guide
+          </a>
+          <a href="progression.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+            Wristband Progression
+          </a>
+          <a href="drift-guide.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg>
+            Drift Guide
+          </a>
+          <a href="tuning-guide.html" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2"/></svg>
+            Tuning Guide
+          </a>
+        </div>
+      </div>
+      <div class="sidebar-card" style="background:rgba(127,119,221,0.04);border-color:rgba(127,119,221,0.15)">
+        <div class="sidebar-title" style="color:var(--purple)">New to FH6?</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6">Touge Showdown is a new mode in FH6 — if you're coming from FH5 you won't have played anything like it. Start on Takashiro Descent (easiest route) to learn the format before queuing ranked.</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">FH6<span>Guide</span></div>
+    <div class="footer-note" style="margin-top:6px;">Fan-made guide site · Not affiliated with Playground Games or Xbox Game Studios</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Submit a guide</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){
+  var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');
+  if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))
+    d.classList.remove('open')
+});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Car Mastery Guide — Best Skills to Unlock First 2026 | FH6Guide</title>
+<meta name="description" content="FH6 Car Mastery guide: which perks are worth unlocking, how to earn Skill Points fast, and the best Car Mastery paths ranked for every type of player.">
+<link rel="canonical" href="https://www.fh6guide.org/car-mastery-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#0a0a0c; --bg2:#111116; --bg3:#18181f;
+  --border:rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.12);
+  --accent:#e8ff47; --accent2:#ff6b35; --accent3:#47c5ff;
+  --text:#f0efe8; --muted:#7a7a88; --muted2:#4a4a58;
+  --green:#1D9E75; --amber:#BA7517; --red:#ff4d4d; --purple:#7F77DD;
+  --font-disp:'Bebas Neue',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --font-mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:52px}
+.nav-logo{font-family:var(--font-disp);font-size:22px;letter-spacing:.04em;color:var(--accent);flex-shrink:0}
+.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1}
+.nav-links a{display:block;padding:0 14px;height:52px;line-height:52px;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.03em;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--accent)}
+.nav-search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:34px;cursor:text;flex-shrink:0}
+.nav-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13px;width:180px}
+.nav-search input::placeholder{color:var(--muted2)}
+.nav-search svg{color:var(--muted);flex-shrink:0}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:6px;flex-shrink:0}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+.nav-drawer{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border2);padding:12px 0 20px;z-index:99;flex-direction:column}
+.nav-drawer.open{display:flex}
+.nav-drawer a{padding:12px 2rem;font-size:15px;font-weight:500;color:var(--muted);display:block;transition:color .15s}
+.nav-drawer a:hover{color:var(--text)}
+.nav-drawer a.active{color:var(--accent)}
+.nav-drawer-search{margin:12px 2rem 0;display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:0 12px;height:40px}
+.nav-drawer-search input{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:14px;flex:1}
+.nav-drawer-search input::placeholder{color:var(--muted2)}
+
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+.breadcrumb{display:flex;align-items:center;gap:8px;padding:14px 0;font-family:var(--font-mono);font-size:11px;color:var(--muted);flex-wrap:wrap}
+.breadcrumb a{color:var(--muted);transition:color .15s}
+.breadcrumb a:hover{color:var(--text)}
+.content-wrap{display:grid;grid-template-columns:1fr 268px;gap:40px;padding:36px 0 60px}
+
+.article-header{margin-bottom:32px}
+.article-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px;border:1px solid}
+.tag-advanced{color:var(--accent2);border-color:rgba(255,107,53,0.3);background:rgba(255,107,53,0.08)}
+.tag-cars{color:var(--accent3);border-color:rgba(71,197,255,0.3);background:rgba(71,197,255,0.08)}
+.tag-beginner{color:var(--green);border-color:rgba(29,158,117,0.3);background:rgba(29,158,117,0.08)}
+.tag-endgame{color:var(--accent);border-color:rgba(232,255,71,0.3);background:rgba(232,255,71,0.08)}
+.tag-hot{color:var(--red);border-color:rgba(255,77,77,0.3);background:rgba(255,77,77,0.08)}
+.article-title{font-family:var(--font-disp);font-size:clamp(32px,5vw,52px);line-height:1;letter-spacing:.02em;margin-bottom:14px}
+.article-meta{font-family:var(--font-mono);font-size:11px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+
+.prose{font-size:15px;line-height:1.7;color:var(--text)}
+.prose h2{font-family:var(--font-disp);font-size:26px;letter-spacing:.04em;margin:36px 0 14px;padding-top:8px;border-top:1px solid var(--border)}
+.prose h3{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2);margin:22px 0 8px}
+.prose p{margin-bottom:14px;color:rgba(240,239,232,0.85)}
+.prose strong{color:var(--text);font-weight:500}
+.prose ul{margin:0 0 14px 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.prose ul li{padding-left:18px;position:relative;color:rgba(240,239,232,0.85)}
+.prose ul li::before{content:'—';position:absolute;left:0;color:var(--muted2)}
+.prose a{color:var(--accent3);border-bottom:1px solid rgba(71,197,255,0.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--accent3)}
+
+.callout{border-radius:8px;padding:14px 16px;margin:20px 0;display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.55}
+.callout-tip{background:rgba(232,255,71,0.05);border:1px solid rgba(232,255,71,0.2);color:var(--accent)}
+.callout-warn{background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.25);color:var(--accent2)}
+.callout-info{background:rgba(71,197,255,0.05);border:1px solid rgba(71,197,255,0.2);color:var(--accent3)}
+.callout-icon{font-size:14px;flex-shrink:0;margin-top:1px}
+
+/* Mastery perk cards */
+.perk-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.perk-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative;overflow:hidden;transition:border-color .2s}
+.perk-card:hover{border-color:var(--border2)}
+.perk-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.perk-s{border-color:rgba(232,255,71,0.2)} .perk-s::before{background:var(--accent)}
+.perk-a{border-color:rgba(71,197,255,0.2)} .perk-a::before{background:var(--accent3)}
+.perk-b{border-color:rgba(255,107,53,0.15)} .perk-b::before{background:var(--accent2)}
+.perk-c{border-color:var(--border)}         .perk-c::before{background:var(--muted2)}
+.perk-tier-badge{position:absolute;top:12px;right:12px;font-family:var(--font-disp);font-size:18px;letter-spacing:.04em}
+.perk-s .perk-tier-badge{color:var(--accent)}
+.perk-a .perk-tier-badge{color:var(--accent3)}
+.perk-b .perk-tier-badge{color:var(--accent2)}
+.perk-c .perk-tier-badge{color:var(--muted2)}
+.perk-name{font-size:14px;font-weight:500;margin-bottom:4px;padding-right:28px}
+.perk-sp{font-family:var(--font-mono);font-size:10px;color:var(--muted);margin-bottom:6px}
+.perk-desc{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* SP earning table */
+.sp-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+.sp-table th{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border2)}
+.sp-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:rgba(240,239,232,0.85);vertical-align:top}
+.sp-table tr:last-child td{border-bottom:none}
+.sp-table tr:hover td{background:var(--bg3)}
+.sp-table .highlight td{background:rgba(232,255,71,0.04)}
+.sp-val{font-family:var(--font-mono);color:var(--accent);font-weight:500}
+
+/* Sidebar */
+.sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.sidebar-head{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.sidebar-head-title{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sidebar-body{padding:14px 16px}
+.sidebar-link-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.sidebar-link-list li a{display:flex;align-items:center;justify-content:space-between;padding:7px 8px;border-radius:5px;font-size:13px;color:var(--muted);transition:background .15s,color .15s}
+.sidebar-link-list li a:hover{background:var(--bg3);color:var(--text)}
+.sidebar-link-list li a.current{color:var(--accent2);background:rgba(255,107,53,0.06)}
+.sidebar-arrow{font-size:10px;color:var(--muted2)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list li a{display:block;padding:6px 8px;border-radius:5px;font-size:12px;color:var(--muted);transition:background .15s,color .15s;font-family:var(--font-mono)}
+.toc-list li a:hover{background:var(--bg3);color:var(--text)}
+.quick-stat{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.quick-stat:last-child{border-bottom:none}
+.qs-label{color:var(--muted);font-size:12px}
+.qs-val{font-family:var(--font-mono);font-size:12px;color:var(--text)}
+.qs-val.accent{color:var(--accent)}
+
+footer{border-top:1px solid var(--border);padding:36px 2rem;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo{font-family:var(--font-disp);font-size:18px;letter-spacing:.04em;color:var(--accent)}
+.footer-logo span{color:var(--muted)}
+.footer-note{font-family:var(--font-mono);font-size:10px;color:var(--muted2);letter-spacing:.06em}
+.footer-links{display:flex;gap:20px;list-style:none}
+.footer-links a{font-size:12px;color:var(--muted);transition:color .15s}
+.footer-links a:hover{color:var(--text)}
+
+code{font-family:var(--font-mono);font-size:12px;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent2)}
+
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}
+  .nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}
+  .content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}
+  .prose h2{font-size:22px}
+  .perk-grid{grid-template-columns:1fr}
+  .sp-table{font-size:12px}
+  .sp-table th,.sp-table td{padding:8px 8px}
+}
+@media(max-width:480px){
+  .article-meta{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html" class="active">Cars &amp; Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html">Advanced</a></li>
+  </ul>
+  <div class="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html" class="active">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html">Advanced</a>
+  <div class="nav-drawer-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span style="color:var(--muted2)">/</span>
+    <a href="car-tier-list.html">Cars &amp; Garage</a>
+    <span style="color:var(--muted2)">/</span>
+    Car Mastery Guide
+  </div>
+</div>
+
+<div class="page-wrap">
+<div class="content-wrap">
+
+<article>
+  <div class="article-header">
+    <div class="article-tags">
+      <span class="tag tag-cars">Cars</span>
+      <span class="tag tag-beginner">Beginner</span>
+      <span class="tag tag-endgame">Endgame</span>
+    </div>
+    <h1 class="article-title">Car Mastery Guide</h1>
+    <div class="article-meta">
+      <span>Updated May 22, 2026</span>
+      <span>~7 min read</span>
+      <span>Cars · Progression</span>
+    </div>
+  </div>
+
+  <div class="prose">
+
+    <p>Every car in Forza Horizon 6 has its own Car Mastery tree — a grid of unlockable perks purchased with <strong>Skill Points (SP)</strong>. From bonus CR multipliers and XP boosts to exclusive Forza Edition car unlocks and special cosmetics, knowing which perks are actually worth your SP can save you hundreds of grinding hours.</p>
+
+    <div class="callout callout-info">
+      <div class="callout-icon">ℹ</div>
+      <div>Car Mastery perks are <strong>per-car</strong> — unlocking a perk on your Supra does not carry over to your RX-7. Prioritise spending SP on cars you actually play frequently, or on cars with uniquely powerful perk layouts.</div>
+    </div>
+
+    <h2>How Skill Points Work</h2>
+
+    <p>Skill Points are earned by building and banking Skill Chains while driving. Every action — drifts, near-misses, air time, speed zones, destruction — adds to your chain multiplier. When you bank the chain (by coming to a stop or pressing the bank button), you convert accumulated Skill Score into SP.</p>
+
+    <h3>Skill Point Earning Rate</h3>
+    <table class="sp-table">
+      <thead>
+        <tr><th>Skill Score Required</th><th>SP Earned</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>25,000</td><td><span class="sp-val">1 SP</span></td><td>Base rate, all cars</td></tr>
+        <tr><td>50,000</td><td><span class="sp-val">2 SP</span></td><td>Combo multiplier helps here</td></tr>
+        <tr><td>100,000+</td><td><span class="sp-val">4 SP</span></td><td>Chain-building in open areas</td></tr>
+        <tr class="highlight"><td>500,000</td><td><span class="sp-val">20 SP</span></td><td>Extended drift sessions, Nangan loop</td></tr>
+      </tbody>
+    </table>
+
+    <p>The most efficient method is the <strong>Nangan Industrial Loop</strong> — a figure-8 course through the industrial district that enables near-infinite drift chains. With a tuned RWD drift car, you can bank 500k+ chains regularly. See the <a href="skill-points-guide.html">Skill Points Farming Guide</a> for the exact route.</p>
+
+    <div class="callout callout-tip">
+      <div class="callout-icon">★</div>
+      <div><strong>Don't break your chain.</strong> Crashing resets your entire Skill Score to zero — it's not banked. Always bank at the first sign of trouble. A banked 200k chain is worth more than a crashed 800k chain.</div>
+    </div>
+
+    <h2>Perk Tier List — What's Worth Unlocking</h2>
+
+    <p>Not all perks are equal. Here's how every perk type ranks based on long-term value:</p>
+
+    <div class="perk-grid">
+      <div class="perk-card perk-s">
+        <div class="perk-tier-badge">S</div>
+        <div class="perk-name">Wheelspins</div>
+        <div class="perk-sp">1–3 SP each</div>
+        <div class="perk-desc">Single Wheelspin or Super Wheelspin rewards. Best ROI in the entire tree — each Super Wheelspin is worth 150,000–3,000,000+ CR on average.</div>
+      </div>
+      <div class="perk-card perk-s">
+        <div class="perk-tier-badge">S</div>
+        <div class="perk-name">Forza Edition Car Unlock</div>
+        <div class="perk-sp">5–10 SP</div>
+        <div class="perk-desc">Some base cars have an FE variant locked behind Car Mastery. The only way to obtain certain FE cars outside of Auction House. Extremely high value.</div>
+      </div>
+      <div class="perk-card perk-a">
+        <div class="perk-tier-badge">A</div>
+        <div class="perk-name">CR Bonus (event)</div>
+        <div class="perk-sp">2–4 SP</div>
+        <div class="perk-desc">+20–100% CR earned in races with this car. Compounds massively over time if you play the car regularly. Worth it for daily drivers.</div>
+      </div>
+      <div class="perk-card perk-a">
+        <div class="perk-tier-badge">A</div>
+        <div class="perk-name">XP Boost</div>
+        <div class="perk-sp">2–3 SP</div>
+        <div class="perk-desc">+20–50% XP from all activities. Great for players still levelling Wristbands or grinding Festival Points. Less useful at endgame.</div>
+      </div>
+      <div class="perk-card perk-b">
+        <div class="perk-tier-badge">B</div>
+        <div class="perk-name">Skill Score Multiplier</div>
+        <div class="perk-sp">2–4 SP</div>
+        <div class="perk-desc">+10–25% to Skill Score chains. Helps future SP farming on this specific car. Worth it if you're using this car as your dedicated SP grinder.</div>
+      </div>
+      <div class="perk-card perk-b">
+        <div class="perk-tier-badge">B</div>
+        <div class="perk-name">Seasonal CR Bonus</div>
+        <div class="perk-sp">3–5 SP</div>
+        <div class="perk-desc">Bonus CR specifically during Festival Playlist seasons. Situational — strong during active playlist weeks, useless off-season.</div>
+      </div>
+      <div class="perk-card perk-c">
+        <div class="perk-tier-badge">C</div>
+        <div class="perk-name">Cosmetic Horn / Emote</div>
+        <div class="perk-sp">1–2 SP</div>
+        <div class="perk-desc">Unique horn or celebration animation. Pure cosmetic, no gameplay benefit. Only unlock if you genuinely want the specific cosmetic.</div>
+      </div>
+      <div class="perk-card perk-c">
+        <div class="perk-tier-badge">C</div>
+        <div class="perk-name">Car-Specific Vanity</div>
+        <div class="perk-sp">2–3 SP</div>
+        <div class="perk-desc">Licence plate banners, driver gear, car badges. All cosmetic. Skip unless completing a specific achievement that requires Car Mastery completion.</div>
+      </div>
+    </div>
+
+    <h2>Best Cars to Prioritise for Mastery</h2>
+
+    <p>Some cars have unusually strong Mastery trees. These are worth grinding SP on specifically:</p>
+
+    <h3>Cars with Super Wheelspin perks in the tree</h3>
+    <ul>
+      <li><strong>Toyota GR Yaris</strong> — 2× Super Wheelspin accessible without clearing the whole tree (6 SP path)</li>
+      <li><strong>Nissan Skyline GT-R R34</strong> — 3× standard Wheelspin + 1× Super Wheelspin in the inner ring</li>
+      <li><strong>Mazda MX-5 Miata (2016)</strong> — Surprisingly strong tree for a budget car; 2× Super Wheelspin at 8 SP total</li>
+      <li><strong>Any Forza Edition car</strong> — FE trees are consistently stronger, with more CR bonuses and Wheelspins per SP spent</li>
+    </ul>
+
+    <h3>Cars with Forza Edition Unlock perks</h3>
+    <p>These base cars have their Forza Edition variant locked in Car Mastery. You cannot get these FE versions any other way (outside Auction House):</p>
+    <ul>
+      <li><strong>2021 Toyota GR Supra</strong> → GR Supra FE (Speed Skill bonus) at 15 SP total</li>
+      <li><strong>2020 Ford Mustang Shelby GT500</strong> → Mustang FE (Danger Sign bonus) at 12 SP total</li>
+      <li><strong>1992 Mazda 323i Familia GT-R</strong> → 323i FE (Skill Chain bonus) at 10 SP total</li>
+    </ul>
+
+    <div class="callout callout-warn">
+      <div class="callout-icon">⚠</div>
+      <div>The Car Mastery tree layout differs per car — there's no universal "best path." Always preview the full tree in the Garage before spending any SP, and plan a route to the perk you want without wasting points on C-tier cosmetics.</div>
+    </div>
+
+    <h2>Car Mastery Completion — Is It Worth It?</h2>
+
+    <p>Completing 100% of a car's Mastery tree (unlocking every node) triggers a one-time reward and counts toward the <strong>Completionist</strong> achievement track. However, full completion is almost never efficient because the outer nodes are dominated by cosmetics.</p>
+
+    <p>The exception: if you're hunting the <strong>"Master of All" achievement</strong> (complete Mastery trees for 25 different cars), focus on cars with small trees — lighter road cars like the Toyota 86 or Honda Civic Type R have fewer total nodes, making full completion far cheaper.</p>
+
+    <h3>Achievement — Car Mastery</h3>
+    <ul>
+      <li><strong>First Steps</strong> — Unlock your first Car Mastery perk (any car) — 10G</li>
+      <li><strong>Deep Dive</strong> — Fully complete the Mastery tree for any one car — 25G</li>
+      <li><strong>Master of All</strong> — Fully complete 25 different car Mastery trees — 50G</li>
+    </ul>
+
+    <h2>How to Farm SP Efficiently</h2>
+
+    <p>The fastest SP farming method uses a high-powered drift car in Nangan. Full details in the <a href="skill-points-guide.html">dedicated Skill Points guide</a>, but here's the quick version:</p>
+
+    <ul>
+      <li>Use a <strong>500+ HP RWD car</strong> tuned for drift (loose rear, high power, low aero)</li>
+      <li>Drive to the <strong>Nangan Industrial Strip</strong> and use the figure-8 loop between the warehouses</li>
+      <li>Keep the drift chain alive for 2–3 minutes before banking — targeting 300k–500k Skill Score per bank</li>
+      <li>A <strong>Skill Score Mastery perk</strong> on your SP farming car increases every chain — pay for itself within 2–3 sessions</li>
+      <li>Equipping a <strong>Forza Edition car with Skill Chain bonus</strong> stacks even more multiplier</li>
+    </ul>
+
+    <div class="callout callout-tip">
+      <div class="callout-icon">★</div>
+      <div>Use the <strong>Autumn/Winter season</strong> if it's active — the Seasonal CR bonus perks are most valuable during active weeks. Combine with a Festival Playlist challenge for double efficiency.</div>
+    </div>
+
+  </div>
+</article>
+
+<aside class="sidebar">
+
+  <div class="sidebar-card">
+    <div class="sidebar-head">
+      <div class="sidebar-head-title">Cars &amp; Garage</div>
+    </div>
+    <div class="sidebar-body">
+      <ul class="sidebar-link-list">
+        <li><a href="car-tier-list.html">Car Tier List <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="best-cars-by-type.html">Best Cars by Event Type <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="forza-edition-cars.html">Forza Edition Cars <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="car-list.html">Full Car List (618) <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="car-mastery-guide.html" class="current">Car Mastery Guide <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="auction-house.html">Auction House Guide <span class="sidebar-arrow">→</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <div class="sidebar-head">
+      <div class="sidebar-head-title">Table of Contents</div>
+    </div>
+    <div class="sidebar-body">
+      <ul class="toc-list">
+        <li><a href="#how-skill-points-work">How Skill Points Work</a></li>
+        <li><a href="#perk-tier-list">Perk Tier List</a></li>
+        <li><a href="#best-cars-mastery">Best Cars to Prioritise</a></li>
+        <li><a href="#full-completion">Is Full Completion Worth It?</a></li>
+        <li><a href="#farm-sp">Farm SP Efficiently</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <div class="sidebar-head">
+      <div class="sidebar-head-title">Quick Reference</div>
+    </div>
+    <div class="sidebar-body">
+      <div class="quick-stat">
+        <span class="qs-label">SP per 25k Score</span>
+        <span class="qs-val accent">1 SP</span>
+      </div>
+      <div class="quick-stat">
+        <span class="qs-label">Best Wheelspin value</span>
+        <span class="qs-val">Super Wheelspin</span>
+      </div>
+      <div class="quick-stat">
+        <span class="qs-label">Fastest SP farm spot</span>
+        <span class="qs-val">Nangan Loop</span>
+      </div>
+      <div class="quick-stat">
+        <span class="qs-label">Mastery achieve (easy)</span>
+        <span class="qs-val">Toyota 86 tree</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <div class="sidebar-head">
+      <div class="sidebar-head-title">Related Guides</div>
+    </div>
+    <div class="sidebar-body">
+      <ul class="sidebar-link-list">
+        <li><a href="skill-points-guide.html">Skill Points Farming <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="xp-credits-farming.html">Credits &amp; XP Farming <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="achievements.html">Achievements Guide <span class="sidebar-arrow">→</span></a></li>
+        <li><a href="tune-share-codes.html">Tune Share Codes <span class="sidebar-arrow">→</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+</aside>
+
+</div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">FH6<span>Guide</span></div>
+    <div class="footer-note" style="margin-top:6px;">Fan-made guide site · Not affiliated with Playground Games or Xbox Game Studios</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Submit a guide</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){
+  var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');
+  if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))
+    d.classList.remove('open')
+});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})
+});
+</script>
+</body>
+</html>
