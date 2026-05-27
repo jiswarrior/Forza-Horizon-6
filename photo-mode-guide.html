@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forza Horizon 6 Photo Mode Guide — Tips, Settings & Tricks 2026 | FH6Guide</title>
+<meta name="description" content="Master Photo Mode in Forza Horizon 6. Learn aperture, exposure, filters, and framing tricks to capture stunning shots across Japan's 9 regions.">
+<link rel="canonical" href="https://www.fh6guide.org/photo-mode-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0a0a0c;
+  --bg2:       #111116;
+  --bg3:       #18181f;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.12);
+  --accent:    #e8ff47;
+  --accent2:   #ff6b35;
+  --accent3:   #47c5ff;
+  --text:      #f0efe8;
+  --muted:     #7a7a88;
+  --muted2:    #4a4a58;
+  --green:     #1D9E75;
+  --amber:     #BA7517;
+  --red:       #ff4d4d;
+  --purple:    #7F77DD;
+  --font-disp: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,12,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem; display: flex; align-items: center; gap: 2rem; height: 52px;
+}
+.nav-logo { font-family: var(--font-disp); font-size: 22px; letter-spacing: .04em; color: var(--accent); flex-shrink: 0; }
+.nav-logo span { color: var(--text); }
+.nav-links { display: flex; gap: 0; list-style: none; flex: 1; }
+.nav-links a { display: block; padding: 0 14px; height: 52px; line-height: 52px; font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: .03em; transition: color .15s; white-space: nowrap; }
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--accent); }
+.nav-search { margin-left: auto; display: flex; align-items: center; gap: 8px; background: var(--bg3); border: 1px solid var(--border2); border-radius: 6px; padding: 0 12px; height: 34px; flex-shrink: 0; }
+.nav-search input { background: none; border: none; outline: none; color: var(--text); font-family: var(--font-body); font-size: 13px; width: 180px; }
+.nav-search input::placeholder { color: var(--muted2); }
+.nav-search svg { color: var(--muted); flex-shrink: 0; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; margin-left: auto; padding: 6px; flex-shrink: 0; border: none; background: none; }
+.nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+.nav-drawer { display: none; position: fixed; top: 52px; left: 0; right: 0; background: rgba(10,10,12,0.98); border-bottom: 1px solid var(--border2); padding: 12px 0 20px; z-index: 99; flex-direction: column; }
+.nav-drawer.open { display: flex; }
+.nav-drawer a { padding: 12px 2rem; font-size: 15px; font-weight: 500; color: var(--muted); display: block; transition: color .15s; }
+.nav-drawer a:hover { color: var(--text); }
+.nav-drawer a.active { color: var(--accent); }
+.nav-drawer-search { margin: 12px 2rem 0; display: flex; align-items: center; gap: 8px; background: var(--bg3); border: 1px solid var(--border2); border-radius: 6px; padding: 0 12px; height: 40px; }
+.nav-drawer-search input { background: none; border: none; outline: none; color: var(--text); font-family: var(--font-body); font-size: 14px; flex: 1; }
+.nav-drawer-search input::placeholder { color: var(--muted2); }
+
+/* LAYOUT */
+.page-wrap { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); padding: 16px 0 0; flex-wrap: wrap; }
+.breadcrumb a { color: var(--muted); transition: color .15s; }
+.breadcrumb a:hover { color: var(--text); }
+
+.content-wrap { display: grid; grid-template-columns: 1fr 268px; gap: 40px; padding: 36px 0 60px; }
+
+/* ARTICLE */
+.article-eyebrow { font-family: var(--font-mono); font-size: 11px; color: var(--accent2); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.article-eyebrow::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent2); }
+.article-title { font-family: var(--font-disp); font-size: clamp(36px, 6vw, 56px); letter-spacing: .02em; line-height: .95; margin-bottom: 16px; }
+.article-meta { display: flex; align-items: center; gap: 16px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin-bottom: 28px; flex-wrap: wrap; }
+.article-meta-sep { color: var(--muted2); }
+
+/* TAGS */
+.tag { font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px; border-radius: 4px; border: 1px solid; }
+.tag-advanced { color: var(--accent2); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.08); }
+.tag-hot { color: var(--red); border-color: rgba(255,77,77,0.3); background: rgba(255,77,77,0.08); }
+.tags-row { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+
+/* PROSE */
+.prose { color: var(--text); }
+.prose h2 { font-family: var(--font-disp); font-size: 26px; letter-spacing: .04em; margin: 36px 0 14px; color: var(--text); display: flex; align-items: center; gap: 12px; }
+.prose h2 .h2-num { font-family: var(--font-mono); font-size: 11px; color: var(--muted2); letter-spacing: .06em; }
+.prose h3 { font-size: 15px; font-weight: 500; margin: 24px 0 10px; color: var(--text); }
+.prose p { color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
+.prose ul { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.prose ul li { color: var(--muted); display: flex; gap: 10px; align-items: flex-start; line-height: 1.6; }
+.prose ul li::before { content: '→'; color: var(--accent2); font-size: 12px; flex-shrink: 0; margin-top: 3px; }
+
+/* CALLOUT */
+.callout { background: var(--bg2); border: 1px solid var(--border2); border-radius: 8px; padding: 14px 16px; margin: 20px 0; display: flex; gap: 12px; }
+.callout-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.callout-body { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.callout-body strong { color: var(--text); font-weight: 500; }
+.callout.tip { border-color: rgba(232,255,71,0.2); background: rgba(232,255,71,0.04); }
+.callout.info { border-color: rgba(71,197,255,0.2); background: rgba(71,197,255,0.04); }
+.callout.warn { border-color: rgba(255,107,53,0.25); background: rgba(255,107,53,0.05); }
+
+/* SETTING TABLE */
+.setting-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 13px; }
+.setting-table th { background: var(--bg3); color: var(--muted); font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border2); }
+.setting-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; }
+.setting-table tr:last-child td { border-bottom: none; }
+.setting-table td:first-child { color: var(--text); font-weight: 500; white-space: nowrap; }
+.setting-table td:nth-child(2) { font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.val-best { color: var(--accent) !important; }
+.val-good { color: var(--green) !important; }
+
+/* SHOT TYPE CARDS */
+.shot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+.shot-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+.shot-card-title { font-weight: 500; font-size: 13px; margin-bottom: 6px; color: var(--text); }
+.shot-card-sub { font-size: 12px; color: var(--muted); line-height: 1.55; }
+.shot-card-tag { display: inline-block; font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; color: var(--accent2); background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.2); border-radius: 3px; padding: 2px 6px; margin-bottom: 8px; text-transform: uppercase; }
+
+/* DIVIDER */
+.prose-divider { height: 1px; background: var(--border); margin: 32px 0; }
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
+.sidebar-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+.sidebar-card-title { font-family: var(--font-disp); font-size: 16px; letter-spacing: .04em; margin-bottom: 12px; color: var(--text); }
+.sidebar-link-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.sidebar-link-list li a { display: block; padding: 7px 10px; border-radius: 6px; font-size: 13px; color: var(--muted); transition: background .15s, color .15s; }
+.sidebar-link-list li a:hover { background: var(--bg3); color: var(--text); }
+.sidebar-link-list li a.current { color: var(--accent2); background: rgba(255,107,53,0.08); }
+.sidebar-stat { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.sidebar-stat:last-child { border-bottom: none; }
+.sidebar-stat-label { color: var(--muted); }
+.sidebar-stat-val { font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.sidebar-quick-tip { background: rgba(232,255,71,0.04); border: 1px solid rgba(232,255,71,0.15); border-radius: 8px; padding: 12px 14px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.sidebar-quick-tip strong { color: var(--accent); display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+
+/* FOOTER */
+footer { border-top: 1px solid var(--border); padding: 36px 2rem; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer-logo { font-family: var(--font-disp); font-size: 18px; letter-spacing: .04em; color: var(--accent); }
+.footer-logo span { color: var(--muted); }
+.footer-note { font-family: var(--font-mono); font-size: 10px; color: var(--muted2); letter-spacing: .06em; }
+.footer-links { display: flex; gap: 20px; list-style: none; }
+.footer-links a { font-size: 12px; color: var(--muted); transition: color .15s; }
+.footer-links a:hover { color: var(--text); }
+
+@media(max-width:768px){
+  .nav-links,.nav-search{display:none}
+  .nav-hamburger{display:flex}
+  .page-wrap{padding:0 1.25rem}
+  .content-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+  .article-title{font-size:clamp(28px,10vw,44px)}
+  .prose h2{font-size:22px}
+  .shot-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;align-items:flex-start;padding:28px 1.25rem;gap:16px}
+  .footer-links{flex-wrap:wrap;gap:14px}
+}
+@media(max-width:480px){
+  .setting-table{font-size:12px}
+  .setting-table th,.setting-table td{padding:7px 8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="car-tier-list.html">Cars & Garage</a></li>
+    <li><a href="barn-finds.html">Collectibles</a></li>
+    <li><a href="progression.html">Progression</a></li>
+    <li><a href="tuning-guide.html" class="active">Advanced</a></li>
+  </ul>
+  <div class="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+  <button class="nav-hamburger" onclick="toggleNav()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="getting-started.html">Getting Started</a>
+  <a href="car-tier-list.html">Cars &amp; Garage</a>
+  <a href="barn-finds.html">Collectibles</a>
+  <a href="progression.html">Progression</a>
+  <a href="tuning-guide.html" class="active">Advanced</a>
+  <div class="nav-drawer-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search guides…">
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span style="color:var(--muted2)">/</span>
+    <a href="tuning-guide.html">Advanced</a>
+    <span style="color:var(--muted2)">/</span>
+    Photo Mode Guide
+  </div>
+
+  <div class="content-wrap">
+    <!-- MAIN -->
+    <article>
+      <div class="article-eyebrow">Advanced &amp; Setup</div>
+      <h1 class="article-title">Photo Mode<br>Guide</h1>
+      <div class="tags-row">
+        <span class="tag tag-advanced">Advanced</span>
+      </div>
+      <div class="article-meta">
+        <span>Updated May 22, 2026</span>
+        <span class="article-meta-sep">·</span>
+        <span>~6 min read</span>
+        <span class="article-meta-sep">·</span>
+        <span>All platforms</span>
+      </div>
+
+      <div class="prose">
+        <p>Forza Horizon 6's Photo Mode is the most capable in the franchise. With Japan's dramatic backdrops — cherry blossom tunnels, neon city streets, alpine passes, volcanic coastlines — there's never been a better canvas. This guide walks through every setting and gives you a shooting workflow that will produce share-worthy shots consistently.</p>
+
+        <div class="callout tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body"><strong>Access Photo Mode at any time</strong> by pressing <strong>Up on the D-Pad</strong> (controller) or <strong>P</strong> (keyboard). Time freezes instantly — no need to pull over.</div>
+        </div>
+
+        <h2><span class="h2-num">01</span> Camera Controls</h2>
+        <p>Photo Mode places a free-floating camera that can be moved fully independently of your car. Understanding the camera controls is the single biggest skill gate between average and great shots.</p>
+
+        <table class="setting-table">
+          <thead>
+            <tr><th>Control</th><th>Function</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Left Stick / WASD</td><td>Pan camera horizontally &amp; forward/back</td><td>Hold LB/Shift to slow down movement speed</td></tr>
+            <tr><td>Right Stick / Mouse</td><td>Rotate / orbit camera</td><td>Fine adjustments: hold RB/Alt</td></tr>
+            <tr><td>LT / RT (triggers)</td><td>Camera elevation up / down</td><td>Use to get ground-level shots</td></tr>
+            <tr><td>Y / F</td><td>Reset camera to default position</td><td>Useful if you lose your framing</td></tr>
+            <tr><td>LB (hold)</td><td>Precision mode — all movement slowed 5×</td><td>Essential for fine framing</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout info">
+          <div class="callout-icon">📷</div>
+          <div class="callout-body"><strong>Ground-level shots are underused.</strong> Hold LT to drop the camera to tarmac height and shoot upward at your car. Combined with a low aperture and wide angle, this creates dramatic sports-photography-style images that stand out on social media.</div>
+        </div>
+
+        <h2><span class="h2-num">02</span> Exposure &amp; Aperture</h2>
+        <p>These two settings have the biggest impact on how professional your shots look. Most new players leave them at defaults and then wonder why their photos look flat.</p>
+
+        <table class="setting-table">
+          <thead>
+            <tr><th>Setting</th><th>Recommended</th><th>Effect</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Aperture (f-stop)</td><td class="val-best">f/1.8 – f/2.8</td><td>Lower = shallower depth of field, more background blur (bokeh). Great for hero car shots.</td></tr>
+            <tr><td>Aperture</td><td class="val-good">f/8 – f/11</td><td>Higher = everything in focus. Better for landscape/scenery shots with car in frame.</td></tr>
+            <tr><td>Exposure</td><td class="val-best">−0.3 to −0.7</td><td>Slightly underexposed reads as more cinematic. Avoid blowing out highlights.</td></tr>
+            <tr><td>Shutter Speed</td><td class="val-best">1/30 – 1/60</td><td>Slower = motion blur on wheels &amp; surroundings. Reads as speed even in a frozen shot.</td></tr>
+            <tr><td>Focal Length</td><td class="val-best">35mm – 50mm</td><td>Natural perspective. Go 24mm for environmental wide shots; 85mm for compressed telephoto.</td></tr>
+          </tbody>
+        </table>
+
+        <h2><span class="h2-num">03</span> Filters &amp; Color Grading</h2>
+        <p>FH6 ships with 28 filters at launch. They range from subtle color grading to extreme stylized looks. A few stand out as genuinely useful:</p>
+        <ul>
+          <li><strong>Cinematic Dark</strong> — Crushes blacks, boosts contrast. Best for night/rain shots in Tokyo City or Nangan coast.</li>
+          <li><strong>Golden Hour</strong> — Adds warm amber cast. Works beautifully at Takashiro at dawn. Overused at midday — avoid.</li>
+          <li><strong>JDM Film</strong> — Desaturated, slightly faded. Evokes 90s Japanese car culture. Ideal for classic cars like the R32 GT-R.</li>
+          <li><strong>Neon Pulse</strong> — Boosts vibrant colors, slight chromatic aberration. Made for Minamino nighttime street shots.</li>
+          <li><strong>Clean</strong> — No filter. Underrated for modern hypercars in clean mountain environments. Let the geometry speak.</li>
+        </ul>
+
+        <div class="callout warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>Avoid stacking filters.</strong> The filter intensity slider (0–100) lets you blend. Set it to 60–75 rather than 100 for more naturalistic results. Full-strength filters often make shots look processed rather than cinematic.</div>
+        </div>
+
+        <h2><span class="h2-num">04</span> Composition Tips by Shot Type</h2>
+        <p>Different subjects call for different approaches. Here's a quick reference for the four most common shot types in FH6:</p>
+
+        <div class="shot-grid">
+          <div class="shot-card">
+            <div class="shot-card-tag">Hero Shot</div>
+            <div class="shot-card-title">Single-car portrait</div>
+            <div class="shot-card-sub">Low angle, 35–50mm, f/2.0–2.8. Position car slightly off-center (rule of thirds). Blur background. Use golden hour lighting. Avoid dead-straight side profiles — a 3/4 front angle reads as dynamic.</div>
+          </div>
+          <div class="shot-card">
+            <div class="shot-card-tag">Landscape</div>
+            <div class="shot-card-title">Environment with car</div>
+            <div class="shot-card-sub">Wide angle (24mm), f/8+. Car should occupy ≈20% of frame — environment is the story. Sotoyama mountain pass and Takashiro waterfall canyon are the two best backgrounds in the game.</div>
+          </div>
+          <div class="shot-card">
+            <div class="shot-card-tag">Motion</div>
+            <div class="shot-card-title">Blur &amp; speed</div>
+            <div class="shot-card-sub">1/30s shutter, motion blur on. Works best at highway straightaways in Nangan or Tokyo expressway. Keep the car's bodywork sharp; blur should be on wheels and road streaks.</div>
+          </div>
+          <div class="shot-card">
+            <div class="shot-card-tag">Urban Night</div>
+            <div class="shot-card-title">Neon city shots</div>
+            <div class="shot-card-sub">Tokyo City and Minamino at night. Neon Pulse or Cinematic Dark filters. High exposure to capture neon glow — then pull back. Wet road reflections in rain weather = best in the game.</div>
+          </div>
+        </div>
+
+        <h2><span class="h2-num">05</span> Best Locations for Screenshots</h2>
+        <p>Japan gives you an extraordinary variety of backdrops. These are the nine regions ranked by photographic potential:</p>
+        <ul>
+          <li><strong>Takashiro</strong> — Volcanic valley with waterfalls and vertiginous bridges. Every shot here looks epic.</li>
+          <li><strong>Sotoyama</strong> — Dense mountain forest, fog effects, narrow gravel roads. Perfect for rally/dirt cars.</li>
+          <li><strong>Tokyo City</strong> — Urban density and neon. Best at night or during rain. The Rainbow Bridge is a strong foreground element.</li>
+          <li><strong>Ito</strong> — Coastal cliffs with Pacific Ocean backdrop. Clear skies required; overcast conditions flatten the water.</li>
+          <li><strong>Hokubu</strong> — Northern farmland and old railway viaducts. Low horizon = big sky. Moody in fog.</li>
+          <li><strong>Shimanoyama</strong> — Cherry blossom season (Spring playlist) turns this into a pink-and-white paradise.</li>
+          <li><strong>Nangan</strong> — Long coastal highway, dramatic cliff drops. Great motion shots.</li>
+          <li><strong>Ohtani</strong> — Radio towers on high plateau. Minimal clutter. Works well for clean car portraits.</li>
+          <li><strong>Minamino</strong> — Dense urban suburb, night market streets. Best for classic JDM in nostalgic settings.</li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">🏆</div>
+          <div class="callout-body"><strong>Photo Challenges count toward Festival Playlist points.</strong> Each season has at least one Photo Challenge requiring a shot in a specific location or with a specific car type. Complete them with a competitive shot setup to earn playlist points efficiently.</div>
+        </div>
+
+        <div class="prose-divider"></div>
+
+        <h2><span class="h2-num">06</span> Sharing Your Shots</h2>
+        <p>All shots taken in Photo Mode are saved to your in-game gallery and synced to the Forza Horizon social feed. From there you can share directly. A few things to know:</p>
+        <ul>
+          <li>Max resolution export is 4K on PC and Xbox Series X, 1080p on Series S.</li>
+          <li>Shots are saved as JPEGs; RAW export is not available.</li>
+          <li>You can tag your shot with a car make/model and region — this helps discoverability in the in-game feed.</li>
+          <li>Community Spotlight shots (featured weekly by the FH6 team) are selected from the most-liked uploads in the in-game gallery.</li>
+          <li>On PC, screenshots are also saved locally to <code style="font-family:var(--font-mono);font-size:12px;color:var(--accent3);">Documents\Forza Horizon 6\Screenshots</code>.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Advanced Guides</div>
+        <ul class="sidebar-link-list">
+          <li><a href="tuning-guide.html">Tuning Guide</a></li>
+          <li><a href="drift-guide.html">Drift Guide</a></li>
+          <li><a href="drag-racing-guide.html">Drag Racing Guide</a></li>
+          <li><a href="touge-battles-guide.html">Touge Battles Guide</a></li>
+          <li><a href="photo-challenges.html">Photo Challenges</a></li>
+          <li><a href="photo-mode-guide.html" class="current">Photo Mode Guide</a></li>
+          <li><a href="controller-wheel.html">Controller &amp; Wheel</a></li>
+          <li><a href="pc-settings.html">Best PC Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Quick Reference</div>
+        <div class="sidebar-stat"><span class="sidebar-stat-label">Activate</span><span class="sidebar-stat-val">D-Pad Up / P</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-label">Filters available</span><span class="sidebar-stat-val">28</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-label">Max resolution (PC/XSX)</span><span class="sidebar-stat-val">4K</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-label">Max resolution (XSS)</span><span class="sidebar-stat-val">1080p</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-label">Best aperture (portrait)</span><span class="sidebar-stat-val">f/1.8–f/2.8</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-label">Best aperture (landscape)</span><span class="sidebar-stat-val">f/8–f/11</span></div>
+      </div>
+
+      <div class="sidebar-quick-tip">
+        <strong>💡 Pro Tip</strong>
+        Pause the game mid-drift (not mid-air) for the most dramatic smoke and tire-roast shots. Smoke particles persist for ~3 seconds after the freeze, giving you time to reframe.
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Related Guides</div>
+        <ul class="sidebar-link-list">
+          <li><a href="photo-challenges.html">Photo Mode &amp; Challenges</a></li>
+          <li><a href="japan-map.html">Japan Map — 9 Regions</a></li>
+          <li><a href="festival-playlist.html">Festival Playlist</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">FH6<span>Guide</span></div>
+    <div class="footer-note" style="margin-top:6px;">Fan-made guide site · Not affiliated with Playground Games or Xbox Game Studios</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Submit a guide</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navDrawer').classList.toggle('open')}
+document.addEventListener('click',function(e){
+  var d=document.getElementById('navDrawer'),b=document.querySelector('.nav-hamburger');
+  if(d&&d.classList.contains('open')&&!d.contains(e.target)&&b&&!b.contains(e.target))
+    d.classList.remove('open')
+});
+document.querySelectorAll('.nav-drawer a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navDrawer').classList.remove('open')})
+});
+</script>
+</body>
+</html>
