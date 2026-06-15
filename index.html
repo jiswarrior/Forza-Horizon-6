@@ -791,9 +791,9 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">FH6<span>Guide</span></a>
+  <a href="/" class="nav-logo">FH6<span>Guide</span></a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="/" class="active">Home</a></li>
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="car-tier-list.html">Cars & Garage</a></li>
     <li><a href="barn-finds.html">Collectibles</a></li>
@@ -811,7 +811,7 @@ footer {
 
 <!-- Mobile nav drawer -->
 <div class="nav-drawer" id="navDrawer">
-  <a href="index.html" class="active">Home</a>
+  <a href="/" class="active">Home</a>
   <a href="getting-started.html">Getting Started</a>
   <a href="car-tier-list.html">Cars &amp; Garage</a>
   <a href="barn-finds.html">Collectibles</a>
